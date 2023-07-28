@@ -54,7 +54,7 @@ h1 {
 
 /* || Header and Main Navigation .......................................... */
 
-header, .nav-header {
+header, .header, .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,10 +65,8 @@ header img, nav img {
     padding: var(--sl-spacing-large);
 }
 
-header sl-icon-button, nav sl-icon-button {
+header sl-icon-button {
     color: var(--color-purple-primary);
-    font-size: 180%;
-    padding: var(--sl-spacing-large);
 }
 
 /* Code sourced and adapted from:
@@ -83,6 +81,7 @@ nav {
     top: 0;
     left: 0;
     position: fixed;
+    color: var(--color-blue-primary);
     background-color: var(--color-purple-primary);
     overflow: hidden; /* Disable scrolling for content. */
 }
@@ -96,15 +95,27 @@ nav ul {
     list-style: none;
     flex-direction: column;
     justify-content: center;
+    padding: var(--sl-spacing-large);
+}
+
+nav span {
+    padding: var(--sl-spacing-large);
+    width: 100%;
+    font-size: 90%;
+    text-align: center;
 }
 
 /* ........................................................................ */
 
 /* || Custom Classes ...................................................... */
 
-.nav-header {
+.header, .footer {
     position: absolute;
     width: 100vw;
+}
+
+.footer {
+    bottom: 0;
 }
 
 .hidden {
@@ -114,4 +125,10 @@ nav ul {
 /* ........................................................................ */
 
 /* || Shoelace Custom HTML tags ........................................... */
+
+sl-icon-button {
+    font-size: 180%;
+    padding: var(--sl-spacing-large);
+}
+
 /* ........................................................................ */
