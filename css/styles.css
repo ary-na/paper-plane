@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Neucha&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-purple-primary: #6F2DBD;
+    --color-purple-secondary: #B298DC;
+    --color-blue-primary: #B8D0EB;
+    --color-blue-secondary: #B9FAF8;
+
+    --font-family-serif: 'Neucha', cursive;
+    --font-family-sans-serif: 'Lato', sans-serif;
+
+    /* Change primary theme colour to --color-purple-primary. */
+    --sl-color-primary-50: rgb(251 249 253);
+    --sl-color-primary-100: rgb(240 234 248);
+    --sl-color-primary-200: rgb(229 217 243);
+    --sl-color-primary-300: rgb(217 200 238);
+    --sl-color-primary-400: rgb(201 176 230);
+    --sl-color-primary-500: rgb(179 145 220);
+    --sl-color-primary-600: rgb(156 111 210);
+    --sl-color-primary-700: rgb(135 80 200);
+    --sl-color-primary-800: rgb(116 52 191);
+    --sl-color-primary-900: rgb(84 34 143);
+    --sl-color-primary-950: rgb(52 21 89);
+}
+
+/* || General Styles ...................................................... */
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--color-purple-primary);
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: var(--font-family-sans-serif);
+}
+
+section {
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 400%;
+}
+
+/* ........................................................................ */
+
+/* || Header and Main Navigation .......................................... */
+
+header, .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img, nav img {
+    width: 100px;
+    padding: var(--sl-spacing-large);
+}
+
+header sl-icon-button, nav sl-icon-button {
+    color: var(--color-purple-primary);
+    font-size: 180%;
+    padding: var(--sl-spacing-large);
+}
+
+/* Code sourced and adapted from:
+   https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp
+   https://stackoverflow.com/questions/17900122/stretch-child-div-height-to-fill-parent-that-has-dynamic-height
+   */
+
+nav {
+    display: flex; /* Stretch ul to the height of the nav. */
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: var(--color-purple-primary);
+    overflow: hidden; /* Disable scrolling for content. */
+}
+
+nav sl-icon-button {
+    color: var(--color-blue-primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ........................................................................ */
+
+/* || Custom Classes ...................................................... */
+
+.nav-header {
+    position: absolute;
+    width: 100vw;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ........................................................................ */
+
+/* || Shoelace Custom HTML tags ........................................... */
+/* ........................................................................ */
