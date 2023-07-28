@@ -5,3 +5,9 @@
 For more information, visit [Academic Integrity at Curtin](https://www.curtin.edu.au/students/essentials/rights/academic-integrity/)
 
 This repository is for an educational website on aeroplanes developed for a university project.
+
+### Bibliography
+
+https://fonts.google.com
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
