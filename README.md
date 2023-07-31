@@ -11,3 +11,5 @@ This repository is for an educational website on aeroplanes developed for a univ
 https://fonts.google.com
 
 https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+
+https://shoelace.style
