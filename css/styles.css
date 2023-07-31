@@ -45,6 +45,10 @@ section {
     height: 100vh;
 }
 
+img {
+    padding: var(--sl-spacing-large);
+}
+
 h1 {
     text-align: center;
     font-size: 400%;
@@ -54,7 +58,7 @@ h1 {
 
 /* || Header and Main Navigation .......................................... */
 
-header, .header, .footer {
+header, nav, .header, .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +66,6 @@ header, .header, .footer {
 
 header img, nav img {
     width: 100px;
-    padding: var(--sl-spacing-large);
 }
 
 header sl-icon-button {
@@ -72,10 +75,10 @@ header sl-icon-button {
 /* Code sourced and adapted from:
    https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp
    https://stackoverflow.com/questions/17900122/stretch-child-div-height-to-fill-parent-that-has-dynamic-height
+   https://stackoverflow.com/questions/26349987/how-do-i-apply-a-style-to-all-children-of-an-element
    */
 
 nav {
-    display: flex; /* Stretch ul to the height of the nav. */
     height: 100%;
     width: 0;
     top: 0;
@@ -84,17 +87,22 @@ nav {
     color: var(--color-blue-primary);
     background-color: var(--color-purple-primary);
     overflow: hidden; /* Disable scrolling for content. */
+    transition: .7s;
 }
 
 nav sl-icon-button {
     color: var(--color-blue-primary);
+    opacity: 1;
 }
 
 nav ul {
-    display: flex;
     list-style: none;
-    flex-direction: column;
-    justify-content: center;
+    padding: var(--sl-spacing-large);
+    min-width: 500px;
+    font-size: 300%;
+}
+
+nav ul li {
     padding: var(--sl-spacing-large);
 }
 
@@ -112,6 +120,10 @@ nav span {
 .header, .footer {
     position: absolute;
     width: 100vw;
+}
+
+.header {
+    top: 0;
 }
 
 .footer {
