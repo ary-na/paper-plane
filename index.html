@@ -8,11 +8,8 @@
           content="Project 'Paper Plane' is an initiative by Au Aviation to familiarise and educate teenagers and younger adults with modern aircraft features and operations.">
     <meta name="keywords" content="Airplane, Learn to Fly, Aerodynamic Aviation, Flight Journey">
     <title>Paper Plane - Learn to Fly</title>
-    <link rel="stylesheet" media="(prefers-color-scheme:light)"
-          href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.5.2/cdn/themes/light.css">
-    <link rel="stylesheet" media="(prefers-color-scheme:dark)"
-          href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.5.2/cdn/themes/dark.css"
-          onload="document.documentElement.classList.add('sl-theme-dark');">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/themes/light.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/themes/dark.css" />
     <link type="text/css" rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="assets/logos/white-paper-plane.ico">
     <script type="module"
@@ -23,20 +20,24 @@
 <body>
 
 <header>
-    <a href="index.html"><img src="assets/logos/primary-paper-plane.png" alt="This image is the logo for the Paper Plane website."></a>
-    <sl-icon-button name="list" id="listIcon" label="Open Menu" href="javascript:void(0);" onclick="openNavMenu()"></sl-icon-button>
+    <a href="index.html"><img src="assets/logos/primary-paper-plane.png"
+                              alt="This image is the logo for the Paper Plane website."></a>
+    <sl-icon-button name="list" id="listIcon" label="Open Menu" href="javascript:void(0);"
+                    onclick="openNavMenu()"></sl-icon-button>
 </header>
 
 <nav id="navMenu">
     <div class="header">
-        <a href="index.html"><img src="assets/logos/secondary-paper-plane.png" alt="This image is the logo for the Paper Plane website."></a>
-        <sl-icon-button name="x-lg" id="xIcon" label="Close Menu" href="javascript:void(0);" onclick="closeNavMenu()"></sl-icon-button>
+        <a href="index.html"><img src="assets/logos/secondary-paper-plane.png"
+                                  alt="This image is the logo for the Paper Plane website."></a>
+        <sl-icon-button name="x-lg" id="xIcon" label="Close Menu" href="javascript:void(0);"
+                        onclick="closeNavMenu()"></sl-icon-button>
     </div>
     <ul>
-        <li><a href="#learn-to-fly">0 - Test - Place Holder</a></li>
-        <li><a>1 - Test - Place Holder</a></li>
-        <li><a>2 - Test - Place Holder</a></li>
-        <li><a>3 - Test - Place Holder</a></li>
+        <li><a href="#learnToFly" onclick="closeNavMenu()">Place Holder</a></li>
+        <li><a href="#learnToFly" onclick="closeNavMenu()">Place Holder</a></li>
+        <li><a href="#gallery" onclick="closeNavMenu()">Gallery</a></li>
+        <li><a href="#whatIsNext" onclick="closeNavMenu()">What's Next?</a></li>
     </ul>
     <div class="footer">
         <span>Copyright © 2023 Paper Plane. All rights reserved.</span>
@@ -44,13 +45,54 @@
 </nav>
 
 <main>
-    <section id="learn-to-fly">
+    <section id="learnToFly">
         <h1>Learn to Fly</h1>
     </section>
 
     <section id=""><h2>Main Secondary</h2></section>
     <section><h2>Flight Journey</h2></section>
-    <section><h2>What's Next?</h2></section>
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <sl-carousel pagination navigation mouse-dragging loop>
+            <sl-carousel-item>
+                <img
+                        alt="write alt (by Chris Leipelt on Unsplash)"
+                        src="/assets/images/carousel/boeing-737-max-aerial-view.jpg"
+                />
+            </sl-carousel-item>
+            <sl-carousel-item>
+                <img
+                        alt="write alt (by Luka Slapnicar on Unsplash)"
+                        src="/assets/images/carousel/boeing-787-landing.jpg"
+                />
+            </sl-carousel-item>
+            <sl-carousel-item>
+                <img
+                        alt="write alt (by Isaac Struna on Unsplash)"
+                        src="/assets/images/carousel/boeing-747-departing.jpg"
+                />
+            </sl-carousel-item>
+            <sl-carousel-item>
+                <img
+                        alt="write alt (by Franz Harvin Aceituna on Unsplash)"
+                        src="/assets/images/carousel/boeing-777-cockpit.jpg"
+                />
+            </sl-carousel-item>
+            <sl-carousel-item>
+                <img
+                        alt="write alt (by Tienko Dima on Unsplash)"
+                        src="/assets/images/carousel/boeing-787-ready-for-departure.jpg"
+                />
+            </sl-carousel-item>
+            <sl-carousel-item>
+                <img
+                        alt="write alt (by Mathew Browne on Unsplash)"
+                        src="/assets/images/carousel/boeing-747-parked.jpg"
+                />
+            </sl-carousel-item>
+        </sl-carousel>
+    </section>
+    <section id="whatIsNext"><h2>What's Next?</h2></section>
 </main>
 
 <footer>
