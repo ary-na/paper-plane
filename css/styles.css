@@ -43,6 +43,10 @@ body {
 
 section {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 img {
@@ -52,6 +56,14 @@ img {
 h1 {
     text-align: center;
     font-size: 400%;
+}
+
+h2 {
+    display: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* ........................................................................ */
@@ -72,11 +84,11 @@ header sl-icon-button {
     color: var(--color-purple-primary);
 }
 
-/* Code sourced and adapted from:
-   https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp
-   https://stackoverflow.com/questions/17900122/stretch-child-div-height-to-fill-parent-that-has-dynamic-height
-   https://stackoverflow.com/questions/26349987/how-do-i-apply-a-style-to-all-children-of-an-element
-   */
+    /* Code sourced and adapted from:
+       https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp
+       https://stackoverflow.com/questions/17900122/stretch-child-div-height-to-fill-parent-that-has-dynamic-height
+       https://stackoverflow.com/questions/26349987/how-do-i-apply-a-style-to-all-children-of-an-element
+    */
 
 nav {
     height: 100%;
@@ -92,7 +104,6 @@ nav {
 
 nav sl-icon-button {
     color: var(--color-blue-primary);
-    opacity: 1;
 }
 
 nav ul {
@@ -102,9 +113,21 @@ nav ul {
     font-size: 300%;
 }
 
+    /* Code sourced and adapted from:
+       https://stackoverflow.com/questions/13397135/stretch-list-items-li-to-fill-the-width-of-ul
+    */
+
 nav ul li {
-    padding: var(--sl-spacing-large);
+    display: flex;
+    flex-direction: column;
 }
+
+nav ul li a {
+    padding: var(--sl-spacing-large) 0;
+    flex: 1; /* Set flex-grow to grow the element to the size of its parent. */
+}
+
+nav ul li a:
 
 nav span {
     padding: var(--sl-spacing-large);
@@ -141,6 +164,14 @@ nav span {
 sl-icon-button {
     font-size: 180%;
     padding: var(--sl-spacing-large);
+}
+
+sl-carousel {
+    padding: var(--sl-spacing-large);
+}
+
+sl-carousel img {
+    border-radius: 1px;
 }
 
 /* ........................................................................ */
