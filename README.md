@@ -33,3 +33,6 @@ https://imagecompressor.com
 https://unsplash.com
 
 https://draculatheme.com
+
+https://coolors.co
+
