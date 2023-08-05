@@ -5,7 +5,12 @@
     padding: 0;
 }
 
-:root {
+:root,
+:host,
+.sl-theme-light {
+    --color-primary: #f8f8f2;
+    --color-secondary: #282a36;
+    --color-tertiary: #e5e5e5;
     --color-purple-primary: #6F2DBD;
     --color-purple-secondary: #B298DC;
     --color-blue-primary: #B8D0EB;
@@ -28,6 +33,15 @@
     --sl-color-primary-950: rgb(52 21 89);
 }
 
+:host,
+.sl-theme-dark {
+    --color-primary: #282a36;
+    --color-secondary: #f8f8f2;
+    --color-tertiary: #44475a;
+    --color-purple-primary: #331559;
+    --color-purple-secondary: #bd93f9;
+}
+
 /* || General Styles ...................................................... */
 
 html {
@@ -36,8 +50,8 @@ html {
 }
 
 body {
-    background-color: white;
-    color: black;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
     font-family: var(--font-family-sans-serif);
 }
 
@@ -80,10 +94,6 @@ header img, nav img {
     width: 100px;
 }
 
-header sl-icon-button {
-    color: var(--color-purple-primary);
-}
-
     /* Code sourced and adapted from:
        https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp
        https://stackoverflow.com/questions/17900122/stretch-child-div-height-to-fill-parent-that-has-dynamic-height
@@ -100,10 +110,11 @@ nav {
     background-color: var(--color-purple-primary);
     overflow: hidden; /* Disable scrolling for content. */
     transition: .7s;
+    z-index: var(--sl-z-index-tooltip);
 }
 
 nav sl-icon-button {
-    color: var(--color-blue-primary);
+    color: var(--sl-color-primary-900);
 }
 
 nav ul {
@@ -125,13 +136,16 @@ nav ul li {
 nav ul li a {
     padding: var(--sl-spacing-large) 0;
     flex: 1; /* Set flex-grow to grow the element to the size of its parent. */
+    transition: .7s;
+    color: var(--sl-color-primary-900);
 }
 
-nav ul li a:
+nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
+    color: var(--color-blue-primary);
+}
 
 nav span {
     padding: var(--sl-spacing-large);
-    width: 100%;
     font-size: 90%;
     text-align: center;
 }
@@ -166,8 +180,27 @@ sl-icon-button {
     padding: var(--sl-spacing-large);
 }
 
-sl-carousel {
+.icon-button::part(base):hover, .icon-button::part(base):active, .icon-button::part(base):focus {
+    color: var(--color-blue-primary);
+}
+
+sl-carousel, sl-switch {
     padding: var(--sl-spacing-large);
+}
+
+.switch-off::part(control) {
+    background-color: var(--color-purple-primary);
+    border-color: var(--color-blue-primary);
+}
+
+.switch-on::part(control) {
+    background-color: var(--color-blue-primary);
+    border-color: var(--color-blue-primary);
+}
+
+.switch-off::part(thumb), .switch-on::part(thumb) {
+    background-color: var(--color-purple-primary);
+    border-color: var(--color-blue-primary);
 }
 
 sl-carousel img {
