@@ -84,6 +84,16 @@ a {
 
 /* || Header and Main Navigation .......................................... */
 
+    /* Code sourced and adapted from:
+       https://stackoverflow.com/questions/45530235/positionsticky-is-not-working
+    */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: var(--sl-z-index-tooltip);
+}
+
 header, nav, .header, .footer {
     display: flex;
     justify-content: space-between;
