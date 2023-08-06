@@ -2,7 +2,7 @@
   "name": "paper-plane",
   "version": "1.0.0",
   "description": "This package is for an educational website on aeroplanes developed for a university project.",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,12 +11,9 @@
     "url": "git+https://github.com/ary-na/paper-plane.git"
   },
   "keywords": [
-    "Paper",
-    "Plane",
-    "Aeroplanes",
-    "Learn",
-    "to",
-    "Fly"
+    "Paper Plane",
+    "Learn to Fly",
+    "Aeroplanes"
   ],
   "author": "Arian Najafi Yamchelo",
   "license": "ISC",
@@ -25,6 +22,7 @@
   },
   "homepage": "https://github.com/ary-na/paper-plane#readme",
   "dependencies": {
+    "@shoelace-style/shoelace": "^2.6.0",
     "animejs": "^3.2.1"
   }
 }
