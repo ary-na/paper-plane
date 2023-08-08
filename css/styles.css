@@ -85,12 +85,13 @@ a {
 
 /* || Header and Main Navigation .......................................... */
 
-    /* Code sourced and adapted from:
-       https://stackoverflow.com/questions/45530235/positionsticky-is-not-working
-    */
+/* Code sourced and adapted from:
+   https://stackoverflow.com/questions/45530235/positionsticky-is-not-working
+*/
 
 header {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: var(--sl-z-index-tooltip);
 }
@@ -105,11 +106,11 @@ header img, nav img {
     width: 100px;
 }
 
-    /* Code sourced and adapted from:
-       https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp
-       https://stackoverflow.com/questions/17900122/stretch-child-div-height-to-fill-parent-that-has-dynamic-height
-       https://stackoverflow.com/questions/26349987/how-do-i-apply-a-style-to-all-children-of-an-element
-    */
+/* Code sourced and adapted from:
+   https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp
+   https://stackoverflow.com/questions/17900122/stretch-child-div-height-to-fill-parent-that-has-dynamic-height
+   https://stackoverflow.com/questions/26349987/how-do-i-apply-a-style-to-all-children-of-an-element
+*/
 
 nav {
     height: 100%;
@@ -135,9 +136,9 @@ nav ul {
     font-size: 300%;
 }
 
-    /* Code sourced and adapted from:
-       https://stackoverflow.com/questions/13397135/stretch-list-items-li-to-fill-the-width-of-ul
-    */
+/* Code sourced and adapted from:
+   https://stackoverflow.com/questions/13397135/stretch-list-items-li-to-fill-the-width-of-ul
+*/
 
 nav ul li {
     display: flex;
@@ -163,9 +164,33 @@ nav span {
 
 /* ........................................................................ */
 
+/* || Custom IDs .......................................................... */
+#home, #about, #flightJourney {
+    position: relative;
+}
+
+#about {
+    background-color: var(--color-tertiary);
+}
+
+/* Code sourced and adapted from:
+   https://www.w3schools.com/howto/howto_css_flip_image.asp
+*/
+
+#flightJourney > .clouds {
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+#paperPlane {
+    width: 250px;
+}
+
+/* ........................................................................ */
+
 /* || Custom Classes ...................................................... */
 
-.header, .footer {
+.header, .footer, .paper-plane-motion-path {
     position: absolute;
     width: 100vw;
 }
@@ -180,6 +205,21 @@ nav span {
 
 .hidden {
     display: none;
+}
+
+.paper-plane-motion-path svg {
+    visibility: hidden;
+}
+
+.paper-plane-motion-path img {
+    position: absolute;
+    left: 0;
+}
+
+.clouds {
+    position: absolute;
+    bottom: 0;
+    fill: var(--color-tertiary);
 }
 
 /* ........................................................................ */
