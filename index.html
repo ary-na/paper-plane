@@ -54,45 +54,31 @@
 
 <main>
     <section id="home">
-        <h1>Learn to <span>fly</span></h1>
-        <span>Make your flying dreams a reality</span>
+        <h1>Learn to fly</h1>
+        <h2>Make y
+            <svg class="signal" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle id="signalLetter" cx="100" cy="100" r="100"/>
+            </svg>
+            ur <span class="serif">flying</span> dreams a reality
+        </h2>
 
         <aside>
-            <svg class="night-sky" viewBox="0 0 694 1125" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="nightSky">
-                    <path id="sky" d="M0 0H694L347 1125L0 0Z" fill="#F2F2F2"/>
-                    <g id="stars">
-                        <path id="starThree"
-                              d="M535 216L539.051 226.949L550 231L539.051 235.051L535 246L530.949 235.051L520 231L530.949 226.949L535 216Z"
-                              fill="black"/>
-                        <path id="starTwo"
-                              d="M580 138L582.701 145.299L590 148L582.701 150.701L580 158L577.299 150.701L570 148L577.299 145.299L580 138Z"
-                              fill="black"/>
-                        <path id="starOne"
-                              d="M144.5 246L146.526 251.474L152 253.5L146.526 255.526L144.5 261L142.474 255.526L137 253.5L142.474 251.474L144.5 246Z"
-                              fill="black"/>
-                        <circle id="ellipseOne" cx="488" cy="169" r="5" fill="black"/>
-                        <path id="wEllipse"
-                              d="M225.08 163.022C225.08 164 224 165.5 222.5 165.5C219.739 165.5 193.5 137.5 193.5 137.5C193.51 137.498 193.488 137.493 193.51 137.499C193.532 137.505 225.08 160.261 225.08 163.022Z"
-                              fill="black"/>
-                    </g>
+            <svg class="radar" viewBox="0 0 1802 1802" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="radar">
+                    <circle class="ellipse" id="ellipseOne" cx="901" cy="901" r="99.5"/>
+                    <circle class="ellipse" id="ellipseTwo" cx="901" cy="901" r="249.5"/>
+                    <circle class="ellipse" id="ellipseThree" cx="901" cy="901" r="399.5"/>
+                    <circle class="ellipse" id="ellipseFour" cx="901" cy="901" r="549.5"/>
+                    <circle class="ellipse" id="ellipseFive" cx="901" cy="901" r="699.5"/>
+                    <line class="line" id="lineFive" x1="1" y1="900.5" x2="801" y2="900.5"/>
+                    <line class="line" id="lineSix" x1="1.35355" y1="0.646447" x2="831.354" y2="830.646"/>
+                    <line class="line" id="lineFour" x1="0.646447" y1="1800.65" x2="830.646" y2="970.646"/>
+                    <line class="line" id="lineThree" x1="1800.65" y1="1801.35" x2="970.646" y2="971.354"/>
+                    <line class="line" id="lineOne" x1="1801.35" y1="1.35355" x2="971.354" y2="831.354"/>
+                    <line class="line" id="lineTwo" x1="1801" y1="901.5" x2="1001" y2="901.5"/>
                 </g>
             </svg>
 
-
-            <!-- Code sourced and adapted from:
-                 https://stackoverflow.com/questions/49297396/unable-to-draw-lines-by-using-anime-js
-                 https://css-tricks.com/svg-line-animation-works/
-             -->
-            <div class="paper-plane-motion-path">
-                <svg width="100%" viewBox="0 0 1201 733" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="route"
-                          d="M0.837083 509.574L0.835963 250.916C0.835834 221.178 9.26586 192.048 25.1484 166.907L91.6361 61.6576C134.06 -5.49833 235.072 5.13524 262.582 79.653V79.653C285.343 141.308 361.994 162.285 412.978 120.812L465.918 77.7474C498.948 50.8792 542.137 39.9281 583.978 47.812L721.084 73.646C754.447 79.9324 788.369 65.8804 807.513 37.8426V37.8426C847.128 -20.176 935.931 -8.29495 958.901 58.0971L1060.58 351.977C1086.93 428.158 1199.59 409.221 1199.59 328.609V328.609C1199.59 253.753 1099.11 229.261 1064.67 295.722L909.571 594.971C905.431 602.959 900.36 610.429 894.463 617.226V617.226C839.511 680.568 737.286 664.927 703.787 588.052L546.154 226.308C519.872 165.996 558.387 97.2509 623.546 88.1687V88.1687C643.074 85.4469 662.97 88.5947 680.704 97.2118L851.996 180.445C883.402 195.706 903.338 227.559 903.339 262.476V262.476C903.339 303.071 876.508 338.779 837.517 350.076L704.029 388.754C672.347 397.934 638.18 391.137 612.422 370.531L538.347 311.27C491.8 274.033 423.852 313.81 433.536 372.627V372.627C445.371 444.508 348.168 478.528 312.596 414.955L251.89 306.464C223.618 255.937 154.749 246.711 114.175 288.015L108.99 293.293C60.0601 343.104 81.9543 427.103 148.974 446.693L217.958 466.856C369.803 511.239 335.277 735.514 177.113 732.173L159.547 731.801C101.639 730.578 50.6856 693.252 32.056 638.409L12.7159 581.475C4.85011 558.319 0.837189 534.029 0.837083 509.574Z"
-                          stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 10"/>
-                </svg>
-                <img id="polygon" src="assets/logos/black-paper-plane.png"
-                     alt="This is an image of a paper plane depicting an aeroplane.">
-            </div>
 
             <svg class="clouds" width="100%" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
@@ -102,6 +88,19 @@
 
     <section id="about">
         <h2>About us</h2>
+        <!-- Code sourced and adapted from:
+     https://stackoverflow.com/questions/49297396/unable-to-draw-lines-by-using-anime-js
+     https://css-tricks.com/svg-line-animation-works/
+ -->
+        <div class="paper-plane-motion-path">
+            <svg viewBox="0 0 1201 733" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="route"
+                      d="M0.837083 509.574L0.835963 250.916C0.835834 221.178 9.26586 192.048 25.1484 166.907L91.6361 61.6576C134.06 -5.49833 235.072 5.13524 262.582 79.653V79.653C285.343 141.308 361.994 162.285 412.978 120.812L465.918 77.7474C498.948 50.8792 542.137 39.9281 583.978 47.812L721.084 73.646C754.447 79.9324 788.369 65.8804 807.513 37.8426V37.8426C847.128 -20.176 935.931 -8.29495 958.901 58.0971L1060.58 351.977C1086.93 428.158 1199.59 409.221 1199.59 328.609V328.609C1199.59 253.753 1099.11 229.261 1064.67 295.722L909.571 594.971C905.431 602.959 900.36 610.429 894.463 617.226V617.226C839.511 680.568 737.286 664.927 703.787 588.052L546.154 226.308C519.872 165.996 558.387 97.2509 623.546 88.1687V88.1687C643.074 85.4469 662.97 88.5947 680.704 97.2118L851.996 180.445C883.402 195.706 903.338 227.559 903.339 262.476V262.476C903.339 303.071 876.508 338.779 837.517 350.076L704.029 388.754C672.347 397.934 638.18 391.137 612.422 370.531L538.347 311.27C491.8 274.033 423.852 313.81 433.536 372.627V372.627C445.371 444.508 348.168 478.528 312.596 414.955L251.89 306.464C223.618 255.937 154.749 246.711 114.175 288.015L108.99 293.293C60.0601 343.104 81.9543 427.103 148.974 446.693L217.958 466.856C369.803 511.239 335.277 735.514 177.113 732.173L159.547 731.801C101.639 730.578 50.6856 693.252 32.056 638.409L12.7159 581.475C4.85011 558.319 0.837189 534.029 0.837083 509.574Z"
+                      stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 10"/>
+            </svg>
+            <img id="polygon" src="assets/logos/black-paper-plane.png"
+                 alt="This is an image of a paper plane depicting an aeroplane.">
+        </div>
     </section>
 
     <section id="flightJourney">
@@ -158,29 +157,45 @@
             <h2>What's Next?</h2>
             <p>The journey you have embarked on is only the beginning. Try one of the links and see what's waiting for
                 you in the aviation industry.</p>
-            <sl-card class="card-image">
-                <img
-                        slot="image"
-                        src=""
-                        alt="A kitten walks towards camera on top of pallet."
-                />
-                This is a kitten, but not just any kitten. This kitten likes walking along pallets.
+            <sl-card class="card-header">
+                <div slot="header">
+                    <sl-icon-button name="people" label="Pilot Training"></sl-icon-button>
+                    Pilot Training
+                </div>
+                <p>Being a pilot takes hard work, focus, and determination. You'll learn everything about aviation,
+                    aircraft, and navigation. It would be best if you were in good shape, both physically and mentally.
+                    Training includes classes, simulations, and actual flying. Your job is to operate aircraft safely
+                    and
+                    make wise decisions.</p>
+                <sl-button variant="primary">
+                    Learn More
+                </sl-button>
+
             </sl-card>
-            <sl-card class="card-image">
-                <img
-                        slot="image"
-                        src=""
-                        alt="A kitten walks towards camera on top of pallet."
-                />
-                This is a kitten, but not just any kitten. This kitten likes walking along pallets.
+            <sl-card class="card-header">
+                <div slot="header">
+                    <sl-icon-button name="airplane-engines" label="Aerospace Engineering"></sl-icon-button>
+                    Aerospace Engineering
+                </div>
+                <p>Aerospace engineering involves designing aircraft and spacecraft and requires aerodynamics, materials
+                    science, and propulsion systems knowledge. Engineers are developing advanced materials to reduce
+                    weight and improve efficiency and new engines to reduce emissions and improve fuel efficiency. </p>
+                <sl-button variant="primary">
+                    Learn More
+                </sl-button>
             </sl-card>
-            <sl-card class="card-image">
-                <img
-                        slot="image"
-                        src=""
-                        alt="A kitten walks towards camera on top of pallet."
-                />
-                This is a kitten, but not just any kitten. This kitten likes walking along pallets.
+            <sl-card class="card-header">
+                <div slot="header">
+                    <sl-icon-button name="gear" label="Aviation Mechanic"></sl-icon-button>
+                    Aviation Mechanic
+                </div>
+                <p>As an aviation mechanic, your job is to keep aircraft safe and operational. You inspect and fix
+                    mechanical and electrical components and prioritize safety by addressing potential issues before
+                    takeoff. Good communication and problem-solving skills are essential in working with pilots and
+                    other professionals.</p>
+                <sl-button variant="primary">
+                    Learn More
+                </sl-button>
             </sl-card>
             <aside>
                 <svg class="clouds clouds-purple" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
