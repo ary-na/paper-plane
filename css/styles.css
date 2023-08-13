@@ -14,7 +14,7 @@
     --color-tertiary: #e5e5e5;
     --color-purple-primary: #6F2DBD;
     --color-purple-secondary: #B298DC;
-    --color-blue-primary: #B9FAF8;
+    --color-blue-primary: #9CBDE3;
 
     --font-family-serif: 'Neucha', cursive;
     --font-family-sans-serif: 'Lato', sans-serif;
@@ -40,27 +40,25 @@
     --color-tertiary: #44475a;
     --color-purple-primary: #331559;
     --color-purple-secondary: #bd93f9;
-    --color-blue-primary: #B8D0EB;
+    --color-blue-primary: #B9FAF8;
 }
 
 /* || Animations .......................................................... */
 @keyframes blinking {
     from {
-        fill: var(--color-blue-primary);
+        stroke-width: 0;
     }
     to {
-        fill: var(--color-primary);
+        stroke-width: 6;
     }
 }
 
-@keyframes shooting {
+@keyframes signal {
     from {
-        transform: scale(1);
-        fill: var(--color-blue-primary);
+        fill: var(--color-primary);
     }
     to {
-        transform: scale(1.2);
-        fill: var(--color-primary);
+        fill: red;
     }
 }
 
@@ -106,21 +104,11 @@ aside {
     position: absolute;
     width: 100vw;
     height: 100%;
-    bottom: -20px;
+    min-height: 100vh;
 }
 
 h1 {
-    text-align: center;
-    font-size: 10vw;
-    z-index: 1;
-    font-weight: 500;
-    line-height: 1.2;
-    -webkit-text-stroke: .5px var(--color-primary);
-}
-
-h1 span {
-    font-family: var(--font-family-serif);
-    font-size: 250%;
+    display: none;
 }
 
 h2 {
@@ -234,7 +222,6 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
 }
 
 
-
 /* ........................................................................ */
 
 /* || Custom IDs .......................................................... */
@@ -243,11 +230,17 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
     overflow: hidden;
 }
 
-#home > span {
+#home > h2 {
+    display: block;
     font-weight: 300;
-    letter-spacing: .8px;
-    color: var(--color-blue-primary);
-    -webkit-text-stroke: .5px var(--color-purple-primary);
+    font-size: var(--sl-font-size-medium);
+    letter-spacing: 2px;
+    z-index: 6;
+}
+
+#home h2 > span {
+    font-size: var(--sl-font-size-medium);
+    color: var(--color-secondary);
 }
 
 #about {
@@ -260,36 +253,40 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
 */
 
 #flightJourney aside > .clouds {
-    top: -20px;
+    top: 0;
     transform: rotateZ(180deg);
 }
 
-#sky {
-    fill: var(--color-blue-primary);
-}
-
-#stars {
-    fill: var(--color-blue-primary);
-}
-
-#starOne {
-    animation: blinking 2s ease infinite alternate;
-}
-
-#starTwo {
-    animation: blinking 2s ease infinite alternate;
-}
-
-#starThree {
-    animation: blinking 2s ease infinite alternate;
-}
-
 #ellipseOne {
-    animation: blinking 3s infinite alternate;
+    animation: blinking infinite 2s ease alternate-reverse;
 }
 
-#wEllipse {
-    animation: shooting 6s infinite alternate;
+#ellipseTwo {
+    animation: blinking infinite 2.2s ease alternate-reverse;
+}
+
+#ellipseThree {
+    animation: blinking infinite 2.4s ease alternate-reverse;
+}
+
+#ellipseFour {
+    animation: blinking infinite 2.6s ease alternate-reverse;
+}
+
+#ellipseFive {
+    animation: blinking infinite 2.8s ease alternate-reverse;
+}
+
+#lineOne, #lineFour {
+    animation: blinking infinite 2s ease alternate-reverse;
+}
+
+#lineTwo, #lineFive {
+    animation: blinking infinite 2.5s ease alternate-reverse;
+}
+
+#lineThree, #lineSix {
+    animation: blinking infinite 2.8s ease alternate-reverse;
 }
 
 #whatIsNext article > h2 {
@@ -319,16 +316,46 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
     display: none;
 }
 
+.serif {
+    font-family: var(--font-family-serif);
+    font-weight: 300;
+    font-style: italic;
+}
+
+.signal {
+    animation: signal 1s infinite;
+    fill: var(--color-primary);
+    width: 10px;
+}
+
+.radar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.ellipse {
+    stroke: var(--color-tertiary);
+    stroke-width: 6;
+}
+
+.line {
+    stroke: var(--color-blue-primary);
+    stroke-width: 6;
+}
+
 .paper-plane-motion-path svg {
     visibility: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 
 .paper-plane-motion-path img {
     position: absolute;
-    z-index: 2;
-    top: -30px;
-    left: -30px;
-    width: 80px;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 50px;
 }
 
 .clouds {
@@ -339,14 +366,7 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
 
 .clouds-purple {
     fill: var(--color-purple-primary);
-}
-
-.night-sky {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 140%;
-    margin: 0 auto;
+    bottom: -20px;
 }
 
 /* ........................................................................ */
@@ -376,9 +396,39 @@ sl-icon-button {
     border-color: var(--color-blue-primary);
 }
 
-.card-image {
+sl-card {
     max-width: 100vw;
     z-index: 1;
+}
+
+.card-header [slot='header'] {
+    display: flex;
+    align-items: center;
+    gap: var(--sl-spacing-x-small);
+}
+
+.card-header::part(base) {
+    border-color: var(--color-tertiary);
+    background-color: var(--color-primary);
+}
+
+.card-header::part(header) {
+    border-bottom-color: var(--color-purple-secondary);
+}
+
+.card-header::part(body) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sl-spacing-x-small);
+}
+
+.card-header h3 {
+    margin: 0;
+}
+
+.card-header sl-icon-button {
+    font-size: var(--sl-font-size-medium);
+    color: var(--color-purple-secondary);
 }
 
 /* ........................................................................ */
