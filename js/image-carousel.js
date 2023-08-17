@@ -1,4 +1,5 @@
-
+// Code sourced and adapted from:
+// https://splidejs.com
 
 let splide = new Splide( '.splide' );
 let bar    = splide.root.querySelector( '.slider-progress-bar' );
