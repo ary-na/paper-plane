@@ -1,15 +1,16 @@
 // Code sourced and adapted from:
 // https://animejs.com/documentation/#motionPath
-let polygonPath = anime.path('#route');
+// https://animejs.com/documentation/#lineDrawing
+let paperPlanePath = anime.path('#route');
 
 // The settings for the motion path animation of the paper plane on the home screen.
 let paperPlaneMotionPath = anime({
-    targets: '#polygon',
-    translateX: polygonPath('x'),
-    translateY: polygonPath('y'),
-    rotate: polygonPath('angle'),
+    targets: '#paperPlane',
+    translateX: paperPlanePath('x'),
+    translateY: paperPlanePath('y'),
+    rotate: paperPlanePath('angle'),
     easing: 'linear',
-    duration: 25000,
+    duration: 30000,
     loop: true
 });
 
