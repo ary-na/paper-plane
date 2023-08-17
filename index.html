@@ -78,8 +78,9 @@
                     <line class="line" id="lineTwo" x1="1801" y1="901.5" x2="1001" y2="901.5"/>
                 </g>
             </svg>
+        </aside>
 
-
+        <aside>
             <svg class="clouds" width="100%" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
             </svg>
@@ -87,33 +88,70 @@
     </section>
 
     <section id="about">
-        <h2>About us</h2>
+        <h2>FLight Journey</h2>
+        <article>
+            <h3>Your Journey Starts here</h3>
+            <p>Before we start learning how an aorplane can fly we need to understand the part and their functions of an
+                airplane.</p>
+
+            <sl-tab-group class="tab-group">
+                <sl-tab slot="nav" panel="cockpit-and-wings">Cockpit & Wings</sl-tab>
+                <sl-tab slot="nav" panel="fuselage-and-jet-engine">Fuselage & Jet Engine</sl-tab>
+                <sl-tab slot="nav" panel="vertical-and-horizontal-stabiliser">Vertical & Horizontal Stabiliser</sl-tab>
+
+                <sl-tab-panel name="cockpit-and-wings">
+                    <div id="cockpitAndWings">
+                        <svg class="airbus-319" viewBox="0 0 1009 627" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+                        <p></p>
+                    </div>
+                </sl-tab-panel>
+                <sl-tab-panel name="fuselage-and-jet-engine">
+                    <div id="fuselageAndJetEngine">
+                        <svg class="airbus-319" viewBox="0 0 1009 627" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+                        <p></p>
+                    </div>
+                </sl-tab-panel>
+                <sl-tab-panel name="vertical-and-horizontal-stabiliser">
+                    <div id="verticalAndHorizontalStabiliser">
+                        <svg class="airbus-319" viewBox="0 0 1009 627" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+                        <p></p>
+                    </div>
+                </sl-tab-panel>
+            </sl-tab-group>
+        </article>
+    </section>
+
+    <section id="new">
         <!-- Code sourced and adapted from:
-     https://stackoverflow.com/questions/49297396/unable-to-draw-lines-by-using-anime-js
-     https://css-tricks.com/svg-line-animation-works/
- -->
-        <div class="paper-plane-motion-path">
-            <svg viewBox="0 0 1201 733" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="route"
-                      d="M0.837083 509.574L0.835963 250.916C0.835834 221.178 9.26586 192.048 25.1484 166.907L91.6361 61.6576C134.06 -5.49833 235.072 5.13524 262.582 79.653V79.653C285.343 141.308 361.994 162.285 412.978 120.812L465.918 77.7474C498.948 50.8792 542.137 39.9281 583.978 47.812L721.084 73.646C754.447 79.9324 788.369 65.8804 807.513 37.8426V37.8426C847.128 -20.176 935.931 -8.29495 958.901 58.0971L1060.58 351.977C1086.93 428.158 1199.59 409.221 1199.59 328.609V328.609C1199.59 253.753 1099.11 229.261 1064.67 295.722L909.571 594.971C905.431 602.959 900.36 610.429 894.463 617.226V617.226C839.511 680.568 737.286 664.927 703.787 588.052L546.154 226.308C519.872 165.996 558.387 97.2509 623.546 88.1687V88.1687C643.074 85.4469 662.97 88.5947 680.704 97.2118L851.996 180.445C883.402 195.706 903.338 227.559 903.339 262.476V262.476C903.339 303.071 876.508 338.779 837.517 350.076L704.029 388.754C672.347 397.934 638.18 391.137 612.422 370.531L538.347 311.27C491.8 274.033 423.852 313.81 433.536 372.627V372.627C445.371 444.508 348.168 478.528 312.596 414.955L251.89 306.464C223.618 255.937 154.749 246.711 114.175 288.015L108.99 293.293C60.0601 343.104 81.9543 427.103 148.974 446.693L217.958 466.856C369.803 511.239 335.277 735.514 177.113 732.173L159.547 731.801C101.639 730.578 50.6856 693.252 32.056 638.409L12.7159 581.475C4.85011 558.319 0.837189 534.029 0.837083 509.574Z"
-                      stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 10"/>
-            </svg>
-            <img id="polygon" src="assets/logos/black-paper-plane.png"
-                 alt="This is an image of a paper plane depicting an aeroplane.">
-        </div>
+               https://stackoverflow.com/questions/49297396/unable-to-draw-lines-by-using-anime-js
+               https://css-tricks.com/svg-line-animation-works/
+          -->
+        <aside>
+            <div class="paper-plane-motion-path">
+                <svg viewBox="0 0 1201 733" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="route"
+                          d="M0.837083 509.574L0.835963 250.916C0.835834 221.178 9.26586 192.048 25.1484 166.907L91.6361 61.6576C134.06 -5.49833 235.072 5.13524 262.582 79.653V79.653C285.343 141.308 361.994 162.285 412.978 120.812L465.918 77.7474C498.948 50.8792 542.137 39.9281 583.978 47.812L721.084 73.646C754.447 79.9324 788.369 65.8804 807.513 37.8426V37.8426C847.128 -20.176 935.931 -8.29495 958.901 58.0971L1060.58 351.977C1086.93 428.158 1199.59 409.221 1199.59 328.609V328.609C1199.59 253.753 1099.11 229.261 1064.67 295.722L909.571 594.971C905.431 602.959 900.36 610.429 894.463 617.226V617.226C839.511 680.568 737.286 664.927 703.787 588.052L546.154 226.308C519.872 165.996 558.387 97.2509 623.546 88.1687V88.1687C643.074 85.4469 662.97 88.5947 680.704 97.2118L851.996 180.445C883.402 195.706 903.338 227.559 903.339 262.476V262.476C903.339 303.071 876.508 338.779 837.517 350.076L704.029 388.754C672.347 397.934 638.18 391.137 612.422 370.531L538.347 311.27C491.8 274.033 423.852 313.81 433.536 372.627V372.627C445.371 444.508 348.168 478.528 312.596 414.955L251.89 306.464C223.618 255.937 154.749 246.711 114.175 288.015L108.99 293.293C60.0601 343.104 81.9543 427.103 148.974 446.693L217.958 466.856C369.803 511.239 335.277 735.514 177.113 732.173L159.547 731.801C101.639 730.578 50.6856 693.252 32.056 638.409L12.7159 581.475C4.85011 558.319 0.837189 534.029 0.837083 509.574Z"
+                          stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 10"/>
+                </svg>
+                <img id="paperPlane" src="assets/logos/black-paper-plane.png"
+                     alt="This is an image of a paper plane depicting an aeroplane.">
+            </div>
+        </aside>
+
     </section>
 
     <section id="flightJourney">
         <h2>Flight Journey</h2>
         <aside>
-            <svg class="clouds" width="100%" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="clouds" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
             </svg>
         </aside>
     </section>
     <section id="gallery">
+        <h2>Gallery</h2>
         <article>
-            <h2>Gallery</h2>
+            <h3>Photos of the Month</h3>
             <p>We love aviation, and our website is perfect for showcasing your aviation-themed photos! Every month, we
                 highlight a group of fantastic aviation-themed photographs. And think what? We run a cool contest to
                 choose the best shot at the end of each month! Want to join in on the fun? Just click <a
@@ -153,8 +191,9 @@
         </article>
     </section>
     <section id="whatIsNext">
+        <h2>What's Next?</h2>
         <article>
-            <h2>What's Next?</h2>
+            <h3>What's Next?</h3>
             <p>The journey you have embarked on is only the beginning. Try one of the links and see what's waiting for
                 you in the aviation industry.</p>
             <sl-card class="card-header">
@@ -197,12 +236,12 @@
                     Learn More
                 </sl-button>
             </sl-card>
-            <aside>
-                <svg class="clouds clouds-purple" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
-                </svg>
-            </aside>
         </article>
+        <aside>
+            <svg class="clouds clouds-purple" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
+            </svg>
+        </aside>
     </section>
 </main>
 
@@ -214,5 +253,6 @@
 <script src="js/fullscreen-nav.js"></script>
 <script type="module" src="js/switch-themes.js"></script>
 <script src="js/image-carousel.js"></script>
+<script src="js/aeroplanePartsAndFunction.js"></script>
 </body>
 </html>
