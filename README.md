@@ -20,6 +20,8 @@ https://unsplash.com/photos/goXUZJW0U1U
 
 https://unsplash.com/photos/WkxV9zwo4JE
 
+https://freesvg.org/airbus-sketch
+
 ### Bibliography
 
 https://fonts.google.com
@@ -35,4 +37,6 @@ https://unsplash.com
 https://draculatheme.com
 
 https://coolors.co
+
+https://dribbble.com
 
