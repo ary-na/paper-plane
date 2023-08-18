@@ -428,24 +428,32 @@ function displayFunctionForEachPartAsText(id) {
         case "aileron":
         case "spoilers":
         case "slats":
-            aeroplaneCockpitAndWingsP.innerHTML = returnAeroplaneObjectFunctionValueUsingReducer(id);
+            aeroplaneCockpitAndWingsP.innerHTML = `${returnAeroplaneObjectValueUsingReducer("parts", id)}: 
+            ${returnAeroplaneObjectValueUsingReducer("function", id)}`;
             break;
         case "fuselage":
         case "jetEngine":
-            aeroplaneFuselageAndJetEngineP.innerHTML = returnAeroplaneObjectFunctionValueUsingReducer(id);
+            aeroplaneFuselageAndJetEngineP.innerHTML = `${returnAeroplaneObjectValueUsingReducer("parts", id)}:
+             ${returnAeroplaneObjectValueUsingReducer("function", id)}`;
             break;
         case "verticalStabiliser":
         case "rudder":
         case "horizontalStabiliser":
         case "elevator":
-            aeroplaneVerticalAndHorizontalStabiliserP.innerHTML = returnAeroplaneObjectFunctionValueUsingReducer(id);
+            aeroplaneVerticalAndHorizontalStabiliserP.innerHTML = `${returnAeroplaneObjectValueUsingReducer("parts", id)}:
+             ${returnAeroplaneObjectValueUsingReducer("function", id)}`;
             break;
     }
 
 }
 
 // Display objects default text for aeroplane function.
+// https://stackoverflow.com/questions/44782056/i-want-my-text-change-animation-in-javascript-to-have-smooth-transition
+
 function displayDefaultText() {
+    aeroplaneCockpitAndWingsP.style.opacity = 0;
+    aeroplaneFuselageAndJetEngineP.style.opacity = 0;
+    aeroplaneVerticalAndHorizontalStabiliserP.style.opacity = 0;
     aeroplaneCockpitAndWingsP.innerHTML = aeroplane.function.default;
     aeroplaneFuselageAndJetEngineP.innerHTML = aeroplane.function.default;
     aeroplaneVerticalAndHorizontalStabiliserP.innerHTML = aeroplane.function.default;
@@ -455,10 +463,67 @@ function displayDefaultText() {
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 // https://stackoverflow.com/questions/52297161/extracting-data-from-object-by-string
 
-// Return aeroplane object function value with matching id using a reducer by walking through the object.
-function returnAeroplaneObjectFunctionValueUsingReducer(id) {
-    return ["function", id].reduce((f, i) => f[i], aeroplane);
+// Return aeroplane object value with matching key using a reducer by walking through the object.
+function returnAeroplaneObjectValueUsingReducer(key, value) {
+    return [key, value].reduce((k, i) => k[i], aeroplane);
 }
 
 
+// to be deleted
+// // Code sourced and adapted from:
+// // https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
+// // https://stackoverflow.com/questions/19154631/how-to-get-coordinates-of-an-svg-element
+// // https://stackoverflow.com/questions/6802956/how-to-position-a-div-in-a-specific-coordinates
+// // https://stackoverflow.com/questions/6938248/insert-a-div-element-as-parent
+//
+// // Get div elements to add tooltip elements to each one of them.
+// const partsCockpitDiv = document.querySelector("#partsCockpit");
+// const partsWingsDiv = document.querySelector("#partsWings");
+// const partsFlapDiv = document.querySelector("#partsFlap");
+// const partsAileronDiv = document.querySelector("#partsAileron");
+// const partsSpoilersDiv = document.querySelector("#partsSpoilers");
+// const partsSlatsDiv = document.querySelector("#partsSlats");
+//
+// const partsFuselageDiv = document.querySelector("#partsFuselage");
+// const partsJetEngineDiv = document.querySelector("#partsJetEngine");
+//
+// const partsVerticalStabiliserDiv = document.querySelector("#partsVerticalStabiliser");
+// const partsRudderDiv = document.querySelector("#partsRudder");
+// const partsHorizontalStabiliserDiv = document.querySelector("#partsHorizontalStabiliser");
+// const partsElevatorDiv = document.querySelector("#partsElevator");
+//
+// assignXAndYCoordinatesOfSvgToDiv(partsCockpitDiv, cockpit);
+// assignXAndYCoordinatesOfSvgToDiv(partsWingsDiv, wings);
+// assignXAndYCoordinatesOfSvgToDiv(partsFlapDiv, flap);
+// assignXAndYCoordinatesOfSvgToDiv(partsAileronDiv, aileron);
+//
+// assignXAndYCoordinatesOfSvgToDiv(partsFuselageDiv, fuselage);
+// assignXAndYCoordinatesOfSvgToDiv(partsJetEngineDiv, jetEngine);
+//
+//
+// // Get X and Y coordinates of each SVG component and assign them to the div element.
+// function assignXAndYCoordinatesOfSvgToDiv(div, svgComponent) {
+//     let svgComponentTop = svgComponent.getBoundingClientRect().top;
+//     let svgComponentLeft = svgComponent.getBoundingClientRect().left;
+//
+//     div.style.left = `${svgComponentLeft}px`;
+//     div.style.top = `${svgComponentTop}px`;
+// }
+//
+// // Create tooltip to display aeroplanes parts name
+// function createTooltip(evt) {
+//     const cockpitAndWingsElement = document.querySelector("#cockpitAndWings");
+//     const tooltipElement = document.createElement("sl-tooltip");
+//     tooltipElement.setAttribute("content", "jkshfgkjsdhfksdjhgfsdkjhfgskjdf");
+//     const divElement = document.createElement('sl-button');
+//     tooltipElement.appendChild(divElement);
+//     cockpitAndWingsElement.appendChild(tooltipElement);
+//     let divX = cockpit.getBoundingClientRect().x;
+//     let divY = cockpit.getBoundingClientRect().y - 20;
+//     cockpitAndWingsElement.style.position = "relative";
+//     divElement.style.position = "absolute";
+//     divElement.style.left = divX + "px";
+//     divElement.style.top = divY + "px";
+//     console.log("divX " + divX + " divY " + divY);
+// }
 
