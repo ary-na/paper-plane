@@ -22,6 +22,12 @@ https://unsplash.com/photos/WkxV9zwo4JE
 
 https://freesvg.org/airbus-sketch
 
+https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/airplane-parts-function/
+
+https://www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-is-aerodynamics-k4.html
+
+
+
 ### Bibliography
 
 https://fonts.google.com
