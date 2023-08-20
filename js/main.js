@@ -32,6 +32,12 @@ let aeroplane = {
         jetEngine: "Generate thrust",
         default: "Interact with the aeroplane's highlighted parts to see each part's function and details."
     },
+    aerodynamics: {
+        lift: "A force that is opposite of the weight force. An object to fly needs more lift power than its weight.",
+        weight: "A force from gravity that pulls every object down. The weight determines how strong the pull on the object is and how much lift power is needed to push the object up.",
+        thrust: "A Force that pushes an object to move forward. For an object to move forward, it needs more thrust power than its drag force.",
+        drag: "A Force that slows an object down while it is moving. The more air that hits the surface of an object, the greater the drag force becomes."
+    },
     svg: "<g id=\"airbus319\">\n" +
         "    <path id=\"jetEngine\"\n" +
         "          d=\"M715.542 340.42L707.895 338.414L696.575 340.938L683.889 345.555L661.508 354.233L634.172 366.843L619.693 375.306L619.266 377.057L619.823 380.047L614.015 387.482L613.589 389.233L603.295 394.576L602.314 399.19L582.026 409.235L584.591 416.282L579.893 417.993L578.996 419.915L580.62 421.452L585.788 419.571L588.182 426.149L612.744 421.998L634.356 418.146L633.631 416.524L636.495 422.931L643.928 422.886L659.221 421.045L679.681 417.322L699.287 411.251L711.161 405.865L717.397 402.531L723.291 398.257L729.141 392.403L715.542 340.42Z\"/>\n" +
@@ -322,12 +328,12 @@ let aeroplane = {
         "</>\n"
 }
 
-// Get svg element for each tab
+// Get the svg element for each tab.
 const aeroplaneCockpitAndWings = document.querySelector("#cockpitAndWings svg");
 const aeroplaneFuselageAndJetEngine = document.querySelector("#fuselageAndJetEngine svg");
 const aeroplaneVerticalAndHorizontalStabiliser = document.querySelector("#verticalAndHorizontalStabiliser svg");
 
-// Get p element for each tab
+// Get the p element for each tab.
 const aeroplaneCockpitAndWingsP = document.querySelector("#cockpitAndWings p");
 const aeroplaneFuselageAndJetEngineP = document.querySelector("#fuselageAndJetEngine p");
 const aeroplaneVerticalAndHorizontalStabiliserP = document.querySelector("#verticalAndHorizontalStabiliser p");
@@ -335,12 +341,12 @@ const aeroplaneVerticalAndHorizontalStabiliserP = document.querySelector("#verti
 // Display default text inside each p element.
 displayDefaultText();
 
-// Add svg content to each svg element
+// Add svg content to each svg element.
 aeroplaneCockpitAndWings.innerHTML = aeroplane.svg;
 aeroplaneFuselageAndJetEngine.innerHTML = aeroplane.svg;
 aeroplaneVerticalAndHorizontalStabiliser.innerHTML = aeroplane.svg;
 
-// Get different parts of the aeroplane's svg
+// Get different parts of the aeroplane's svg.
 const cockpit = aeroplaneCockpitAndWings.querySelector("#cockpit");
 const wings = aeroplaneCockpitAndWings.querySelector("#wings");
 const flap = aeroplaneCockpitAndWings.querySelector("#flap");
@@ -357,7 +363,7 @@ const rudder = aeroplaneVerticalAndHorizontalStabiliser.querySelector("#rudder")
 const horizontalStabiliser = aeroplaneVerticalAndHorizontalStabiliser.querySelector("#horizontalStabiliser");
 const elevator = aeroplaneVerticalAndHorizontalStabiliser.querySelector("#elevator");
 
-// Add highlight class to each part of the aeroplane.
+// Add the highlight class to each part of the aeroplane.
 cockpit.classList.add("visible", "highlight-aeroplane-parts");
 wings.classList.add("visible", "highlight-aeroplane-parts");
 fuselage.classList.add("visible", "highlight-aeroplane-parts");
@@ -365,7 +371,7 @@ jetEngine.classList.add("visible", "highlight-aeroplane-parts");
 verticalStabiliser.classList.add("visible", "highlight-aeroplane-parts");
 horizontalStabiliser.classList.add("visible", "highlight-aeroplane-parts");
 
-// Add highlight class to each part's components of the aeroplane.
+// Add the highlight class to each part's components of the aeroplane.
 flap.classList.add("highlight-aeroplane-parts-components");
 aileron.classList.add("highlight-aeroplane-parts-components");
 spoilers.classList.add("highlight-aeroplane-parts-components");
@@ -396,7 +402,7 @@ function eventHandler(evt) {
     }
 }
 
-// Add highlight animation class to the elements triggered by the events.
+// Add the highlight animation class to the elements triggered by the events.
 function addHighlightAnimation(element) {
     switch (element.id) {
         case "flap":
@@ -414,7 +420,7 @@ function addHighlightAnimation(element) {
     }
 }
 
-// Remove highlight animation class from the elements triggered by the events
+// Remove the highlight animation class from the elements triggered by the events
 function removeHighlightAnimation(element) {
     element.classList.remove("highlight-aeroplane-parts-animation", "highlight-aeroplane-parts-components-animation");
 }
@@ -447,13 +453,8 @@ function displayFunctionForEachPartAsText(id) {
 
 }
 
-// Display objects default text for aeroplane function.
-// https://stackoverflow.com/questions/44782056/i-want-my-text-change-animation-in-javascript-to-have-smooth-transition
-
+// Display objects default text for the aeroplane function.
 function displayDefaultText() {
-    aeroplaneCockpitAndWingsP.style.opacity = 0;
-    aeroplaneFuselageAndJetEngineP.style.opacity = 0;
-    aeroplaneVerticalAndHorizontalStabiliserP.style.opacity = 0;
     aeroplaneCockpitAndWingsP.innerHTML = aeroplane.function.default;
     aeroplaneFuselageAndJetEngineP.innerHTML = aeroplane.function.default;
     aeroplaneVerticalAndHorizontalStabiliserP.innerHTML = aeroplane.function.default;
@@ -468,62 +469,31 @@ function returnAeroplaneObjectValueUsingReducer(key, value) {
     return [key, value].reduce((k, i) => k[i], aeroplane);
 }
 
+// Get aerodynamics chart div and span elements to create a tooltip element for each.
+const liftDiv = document.querySelector(".lift");
+const weightDiv = document.querySelector(".weight");
+const thrustDiv = document.querySelector(".thrust");
+const dragDiv = document.querySelector(".drag");
 
-// to be deleted
-// // Code sourced and adapted from:
-// // https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
-// // https://stackoverflow.com/questions/19154631/how-to-get-coordinates-of-an-svg-element
-// // https://stackoverflow.com/questions/6802956/how-to-position-a-div-in-a-specific-coordinates
-// // https://stackoverflow.com/questions/6938248/insert-a-div-element-as-parent
-//
-// // Get div elements to add tooltip elements to each one of them.
-// const partsCockpitDiv = document.querySelector("#partsCockpit");
-// const partsWingsDiv = document.querySelector("#partsWings");
-// const partsFlapDiv = document.querySelector("#partsFlap");
-// const partsAileronDiv = document.querySelector("#partsAileron");
-// const partsSpoilersDiv = document.querySelector("#partsSpoilers");
-// const partsSlatsDiv = document.querySelector("#partsSlats");
-//
-// const partsFuselageDiv = document.querySelector("#partsFuselage");
-// const partsJetEngineDiv = document.querySelector("#partsJetEngine");
-//
-// const partsVerticalStabiliserDiv = document.querySelector("#partsVerticalStabiliser");
-// const partsRudderDiv = document.querySelector("#partsRudder");
-// const partsHorizontalStabiliserDiv = document.querySelector("#partsHorizontalStabiliser");
-// const partsElevatorDiv = document.querySelector("#partsElevator");
-//
-// assignXAndYCoordinatesOfSvgToDiv(partsCockpitDiv, cockpit);
-// assignXAndYCoordinatesOfSvgToDiv(partsWingsDiv, wings);
-// assignXAndYCoordinatesOfSvgToDiv(partsFlapDiv, flap);
-// assignXAndYCoordinatesOfSvgToDiv(partsAileronDiv, aileron);
-//
-// assignXAndYCoordinatesOfSvgToDiv(partsFuselageDiv, fuselage);
-// assignXAndYCoordinatesOfSvgToDiv(partsJetEngineDiv, jetEngine);
-//
-//
-// // Get X and Y coordinates of each SVG component and assign them to the div element.
-// function assignXAndYCoordinatesOfSvgToDiv(div, svgComponent) {
-//     let svgComponentTop = svgComponent.getBoundingClientRect().top;
-//     let svgComponentLeft = svgComponent.getBoundingClientRect().left;
-//
-//     div.style.left = `${svgComponentLeft}px`;
-//     div.style.top = `${svgComponentTop}px`;
-// }
-//
-// // Create tooltip to display aeroplanes parts name
-// function createTooltip(evt) {
-//     const cockpitAndWingsElement = document.querySelector("#cockpitAndWings");
-//     const tooltipElement = document.createElement("sl-tooltip");
-//     tooltipElement.setAttribute("content", "jkshfgkjsdhfksdjhgfsdkjhfgskjdf");
-//     const divElement = document.createElement('sl-button');
-//     tooltipElement.appendChild(divElement);
-//     cockpitAndWingsElement.appendChild(tooltipElement);
-//     let divX = cockpit.getBoundingClientRect().x;
-//     let divY = cockpit.getBoundingClientRect().y - 20;
-//     cockpitAndWingsElement.style.position = "relative";
-//     divElement.style.position = "absolute";
-//     divElement.style.left = divX + "px";
-//     divElement.style.top = divY + "px";
-//     console.log("divX " + divX + " divY " + divY);
-// }
+const liftSpan = liftDiv.querySelector("span");
+const weightSpan = weightDiv.querySelector("span");
+const thrustSpan = thrustDiv.querySelector("span");
+const dragSpan = dragDiv.querySelector("span");
 
+createTooltip(liftSpan, liftDiv, aeroplane.aerodynamics.lift);
+createTooltip(weightSpan, weightDiv, aeroplane.aerodynamics.weight);
+createTooltip(thrustSpan, thrustDiv, aeroplane.aerodynamics.thrust);
+createTooltip(dragSpan, dragDiv, aeroplane.aerodynamics.drag);
+
+// Code sourced and adapted from:
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
+// https://stackoverflow.com/questions/6938248/insert-a-div-element-as-parent
+
+// Create a tooltip for each axis of the aerodynamics chart.
+function createTooltip(spanElement, divElement, tooltipContent) {
+    const tooltipElement = document.createElement("sl-tooltip");
+    tooltipElement.setAttribute("content", tooltipContent);
+
+    tooltipElement.appendChild(spanElement);
+    divElement.appendChild(tooltipElement);
+}
