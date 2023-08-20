@@ -38,9 +38,8 @@
                         onclick="closeNavMenu()"></sl-icon-button>
     </div>
     <ul>
-        <li><a href="#home" onclick="closeNavMenu()">Home</a></li>
-        <li><a href="#about" onclick="closeNavMenu()">About</a></li>
-        <li><a href="#flightJourney" onclick="closeNavMenu()">Flight Journey</a></li>
+        <li><a href="#partsAndFunction" onclick="closeNavMenu()">Parts & Function</a></li>
+        <li><a href="#aerodynamics" onclick="closeNavMenu()">Aerodynamics</a></li>
         <li><a href="#gallery" onclick="closeNavMenu()">Gallery</a></li>
         <li><a href="#whatIsNext" onclick="closeNavMenu()">What's Next?</a></li>
     </ul>
@@ -87,8 +86,8 @@
         </aside>
     </section>
 
-    <section id="about">
-        <h2>FLight Journey</h2>
+    <section id="partsAndFunction">
+        <h2>Aeroplane's Parts and Function</h2>
         <article>
             <h3>Your Journey Starts here</h3>
             <p>Before we start learning how an aorplane can fly we need to understand the part and their functions of an
@@ -101,27 +100,83 @@
 
                 <sl-tab-panel name="cockpit-and-wings">
                     <div id="cockpitAndWings">
-                        <svg class="airbus-319" viewBox="0 0 1009 627" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
-                        <p></p>
+                        <svg class="airbus-319" viewBox="0 0 1009 627" fill="none"
+                             xmlns="http://www.w3.org/2000/svg"></svg>
+                        <div><p></p></div>
                     </div>
                 </sl-tab-panel>
                 <sl-tab-panel name="fuselage-and-jet-engine">
                     <div id="fuselageAndJetEngine">
-                        <svg class="airbus-319" viewBox="0 0 1009 627" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
-                        <p></p>
+                        <svg class="airbus-319" viewBox="0 0 1009 627" fill="none"
+                             xmlns="http://www.w3.org/2000/svg"></svg>
+                        <div><p></p></div>
                     </div>
                 </sl-tab-panel>
                 <sl-tab-panel name="vertical-and-horizontal-stabiliser">
                     <div id="verticalAndHorizontalStabiliser">
-                        <svg class="airbus-319" viewBox="0 0 1009 627" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
-                        <p></p>
+                        <svg class="airbus-319" viewBox="0 0 1009 627" fill="none"
+                             xmlns="http://www.w3.org/2000/svg"></svg>
+                        <div><p></p></div>
                     </div>
                 </sl-tab-panel>
             </sl-tab-group>
         </article>
     </section>
 
-    <section id="new">
+    <section id="aerodynamics">
+        <h2>Aerodynamics</h2>
+
+        <article>
+            <h3>Understand how an aeroplane with all it's weight and payload can fly through the clouds</h3>
+            <div class="aerodynamics-chart-y-axis">
+                <div class="lift"><span>Lift</span></div>
+                <div class="aerodynamics-chart-x-axis">
+                    <div class="drag"><span>Drag</span></div>
+                    <svg class="aerodynamics-svg" viewBox="0 0 1074 1074" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <g id="aerodynamics" clip-path="url(#clip0_153_105)">
+                            <g id="lift">
+                                <line id="lifLine" x1="537" y1="487" x2="537" y2="37"/>
+                                <path id="liftPolygon"
+                                      d="M533.536 6C535.075 3.33333 538.925 3.33333 540.464 6L555.187 31.5C556.726 34.1667 554.802 37.5 551.722 37.5H522.278C519.198 37.5 517.274 34.1667 518.813 31.5L533.536 6Z"/>
+                            </g>
+                            <g id="weight">
+                                <line id="weightLine" y1="-4" x2="450" y2="-4" transform="matrix(0 1 1 0 541 587)"/>
+                                <path id="weightPolygon"
+                                      d="M533.536 1068C535.075 1070.67 538.925 1070.67 540.464 1068L555.187 1042.5C556.726 1039.83 554.802 1036.5 551.722 1036.5H522.278C519.198 1036.5 517.274 1039.83 518.813 1042.5L533.536 1068Z"/>
+                            </g>
+                            <g id="thrust">
+                                <line id="thrustLine" y1="-4" x2="450" y2="-4" transform="matrix(1 0 0 -1 587 533)"
+                                      stroke-dasharray="16 16"/>
+                                <path id="thrustPolygon"
+                                      d="M1068 540.464C1070.67 538.925 1070.67 535.075 1068 533.536L1042.5 518.813C1039.83 517.274 1036.5 519.198 1036.5 522.278V551.722C1036.5 554.802 1039.83 556.726 1042.5 555.187L1068 540.464Z"/>
+                            </g>
+                            <g id="drag">
+                                <line id="dragLine" x1="487" y1="537" x2="37" y2="537" stroke-dasharray="16 16"/>
+                                <path id="dragPolygon"
+                                      d="M6 540.464C3.33333 538.925 3.33333 535.075 6 533.536L31.5 518.813C34.1667 517.274 37.5 519.198 37.5 522.278V551.722C37.5 554.802 34.1667 556.726 31.5 555.187L6 540.464Z"/>
+                            </g>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_153_105">
+                                <rect width="1074" height="1074"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="thrust"><span>Thrust</span></div>
+                </div>
+                <div class="weight"><span>Weight</span></div>
+            </div>
+
+        </article>
+
+
+        <aside>
+            <svg class="clouds" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
+            </svg>
+        </aside>
+
         <!-- Code sourced and adapted from:
                https://stackoverflow.com/questions/49297396/unable-to-draw-lines-by-using-anime-js
                https://css-tricks.com/svg-line-animation-works/
@@ -133,21 +188,12 @@
                           d="M0.837083 509.574L0.835963 250.916C0.835834 221.178 9.26586 192.048 25.1484 166.907L91.6361 61.6576C134.06 -5.49833 235.072 5.13524 262.582 79.653V79.653C285.343 141.308 361.994 162.285 412.978 120.812L465.918 77.7474C498.948 50.8792 542.137 39.9281 583.978 47.812L721.084 73.646C754.447 79.9324 788.369 65.8804 807.513 37.8426V37.8426C847.128 -20.176 935.931 -8.29495 958.901 58.0971L1060.58 351.977C1086.93 428.158 1199.59 409.221 1199.59 328.609V328.609C1199.59 253.753 1099.11 229.261 1064.67 295.722L909.571 594.971C905.431 602.959 900.36 610.429 894.463 617.226V617.226C839.511 680.568 737.286 664.927 703.787 588.052L546.154 226.308C519.872 165.996 558.387 97.2509 623.546 88.1687V88.1687C643.074 85.4469 662.97 88.5947 680.704 97.2118L851.996 180.445C883.402 195.706 903.338 227.559 903.339 262.476V262.476C903.339 303.071 876.508 338.779 837.517 350.076L704.029 388.754C672.347 397.934 638.18 391.137 612.422 370.531L538.347 311.27C491.8 274.033 423.852 313.81 433.536 372.627V372.627C445.371 444.508 348.168 478.528 312.596 414.955L251.89 306.464C223.618 255.937 154.749 246.711 114.175 288.015L108.99 293.293C60.0601 343.104 81.9543 427.103 148.974 446.693L217.958 466.856C369.803 511.239 335.277 735.514 177.113 732.173L159.547 731.801C101.639 730.578 50.6856 693.252 32.056 638.409L12.7159 581.475C4.85011 558.319 0.837189 534.029 0.837083 509.574Z"
                           stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 10"/>
                 </svg>
-                <img id="paperPlane" src="assets/logos/black-paper-plane.png"
-                     alt="This is an image of a paper plane depicting an aeroplane.">
+                <img id="flyingPaperPlane" src="assets/images/sections/aerodynamics/flying-paper-plane.png"
+                     alt="This is an image of a paper plane depicting an aeroplane flying.">
             </div>
         </aside>
-
     </section>
 
-    <section id="flightJourney">
-        <h2>Flight Journey</h2>
-        <aside>
-            <svg class="clouds" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
-            </svg>
-        </aside>
-    </section>
     <section id="gallery">
         <h2>Gallery</h2>
         <article>
@@ -163,24 +209,24 @@
                     <ul class="splide__list">
                         <li class="splide__slide">
                             <img alt="write alt (by Chris Leipelt on Unsplash)"
-                                 src="/assets/images/carousel/boeing-737-max-aerial-view.jpg">
+                                 src="/assets/images/sections/gallery/carousel/boeing-737-max-aerial-view.jpg">
                         </li>
                         <li class="splide__slide">
                             <img alt="write alt (by Luka Slapnicar on Unsplash)"
-                                 src="/assets/images/carousel/boeing-787-landing.jpg"></li>
+                                 src="/assets/images/sections/gallery/carousel/boeing-787-landing.jpg"></li>
                         <li class="splide__slide">
                             <img alt="write alt (by Isaac Struna on Unsplash)"
-                                 src="/assets/images/carousel/boeing-747-departing.jpg"></li>
+                                 src="/assets/images/sections/gallery/carousel/boeing-747-departing.jpg"></li>
                         <li class="splide__slide">
                             <img alt="write alt (by Franz Harvin Aceituna on Unsplash)"
-                                 src="/assets/images/carousel/boeing-777-cockpit.jpg"></li>
+                                 src="/assets/images/sections/gallery/carousel/boeing-777-cockpit.jpg"></li>
                         <li class="splide__slide">
                             <img alt="write alt (by Tienko Dima on Unsplash)"
-                                 src="/assets/images/carousel/boeing-787-ready-for-departure.jpg">
+                                 src="/assets/images/sections/gallery/carousel/boeing-787-ready-for-departure.jpg">
                         </li>
                         <li class="splide__slide">
                             <img alt="write alt (by Mathew Browne on Unsplash)"
-                                 src="/assets/images/carousel/boeing-747-parked.jpg"></li>
+                                 src="/assets/images/sections/gallery/carousel/boeing-747-parked.jpg"></li>
                     </ul>
                 </div>
                 <!-- Add the progress bar element -->
@@ -253,6 +299,6 @@
 <script src="js/fullscreen-nav.js"></script>
 <script type="module" src="js/switch-themes.js"></script>
 <script src="js/image-carousel.js"></script>
-<script src="js/aeroplanePartsAndFunction.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
