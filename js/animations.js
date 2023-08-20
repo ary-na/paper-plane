@@ -4,8 +4,8 @@
 let paperPlanePath = anime.path('#route');
 
 // The settings for the motion path animation of the paper plane on the home screen.
-let paperPlaneMotionPath = anime({
-    targets: '#paperPlane',
+let flyingPaperPlaneMotionPath = anime({
+    targets: '#flyingPaperPlane',
     translateX: paperPlanePath('x'),
     translateY: paperPlanePath('y'),
     rotate: paperPlanePath('angle'),
