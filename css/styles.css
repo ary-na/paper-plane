@@ -261,7 +261,7 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
     color: var(--color-secondary);
 }
 
-#about {
+#partsAndFunction {
     background-color: var(--color-tertiary);
 }
 
@@ -270,7 +270,7 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
    https://stackoverflow.com/questions/13324643/absolute-image-position-dont-allow-to-image-go-outide-the-div
 */
 
-#flightJourney aside > .clouds {
+#aerodynamics aside > .clouds {
     top: 0;
     transform: rotateZ(180deg);
 }
@@ -410,6 +410,35 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
 
 .highlight-aeroplane-parts-components-animation {
     animation: aeroplane-interaction-secondary .5s infinite alternate;
+}
+
+.aerodynamics-svg {
+    width: 50vw;
+    fill: var(--color-blue-primary);
+    stroke: var(--color-blue-primary);
+    stroke-width: 10px;
+}
+
+.aerodynamics-chart-y-axis {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--sl-spacing-x-small);
+    text-align: center;
+}
+
+.aerodynamics-chart-x-axis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: var(--sl-spacing-x-small);
+}
+
+.aerodynamics-chart-x-axis > div {
+    flex: 1;
 }
 
 /* ........................................................................ */
