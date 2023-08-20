@@ -328,6 +328,8 @@ let aeroplane = {
         "</>\n"
 }
 
+// Aeroplane Parts and Function:
+
 // Get the svg element for each tab.
 const aeroplaneCockpitAndWings = document.querySelector("#cockpitAndWings svg");
 const aeroplaneFuselageAndJetEngine = document.querySelector("#fuselageAndJetEngine svg");
@@ -382,17 +384,36 @@ elevator.classList.add("highlight-aeroplane-parts-components");
 // Code sourced and adapted from:
 // https://stackoverflow.com/questions/11845678/adding-multiple-event-listeners-to-one-element
 
-aeroplaneElements = [cockpit, wings, fuselage, jetEngine, verticalStabiliser, horizontalStabiliser, flap, aileron, spoilers, slats, rudder, elevator];
+const aeroplanePartsAndFunctionElements = [cockpit, wings, fuselage, jetEngine, verticalStabiliser, horizontalStabiliser, flap, aileron, spoilers, slats, rudder, elevator];
+
+// Aeroplane Aerodynamics:
+
+// Get the div element for each force of the flight.
+const liftDiv = document.querySelector(".lift-div");
+const weightDiv = document.querySelector(".weight-div");
+const thrustDiv = document.querySelector(".thrust-div");
+const dragDiv = document.querySelector(".drag-div");
+
+// Get span elements to create a tooltip element for each.
+const liftSpan = liftDiv.querySelector("span");
+const weightSpan = weightDiv.querySelector("span");
+const thrustSpan = thrustDiv.querySelector("span");
+const dragSpan = dragDiv.querySelector("span");
+
+const aeroplaneAerodynamicsElements = [liftSpan, weightSpan, thrustSpan, dragSpan];
 
 // Add event listener to allow user interaction with different parts of the aeroplane.
 ['mouseover', 'mouseleave', 'click', 'blur'].forEach(evt => {
-    aeroplaneElements.forEach(element => {
-        element.addEventListener(evt, eventHandler, false);
+    aeroplanePartsAndFunctionElements.forEach(element => {
+        element.addEventListener(evt, partsAndFunctionEventHandler, false);
     });
+    aeroplaneAerodynamicsElements.forEach(element => {
+        element.addEventListener(evt, aerodynamicsEventHandler, false);
+    })
 });
 
-// Handle mouseover, mouseleave, click and blur events.
-function eventHandler(evt) {
+// Handle mouseover, mouseleave, click and blur events for Parts and Function.
+function partsAndFunctionEventHandler(evt) {
     if (evt.type === "mouseover" || evt.type === "click") {
         addHighlightAnimation(evt.target);
         displayFunctionForEachPartAsText(evt.target.id);
@@ -401,6 +422,14 @@ function eventHandler(evt) {
         displayDefaultText();
     }
 }
+
+// Handle mouseover, mouseleave, click and blur events for Aerodynamics.
+function aerodynamicsEventHandler(evt) {
+    if (evt.type === "mouseover" || evt.type === "click") {
+        addPolygonAnimation(evt.target.id);
+    }
+}
+
 
 // Add the highlight animation class to the elements triggered by the events.
 function addHighlightAnimation(element) {
@@ -434,20 +463,20 @@ function displayFunctionForEachPartAsText(id) {
         case "aileron":
         case "spoilers":
         case "slats":
-            aeroplaneCockpitAndWingsP.innerHTML = `${returnAeroplaneObjectValueUsingReducer("parts", id)}: 
-            ${returnAeroplaneObjectValueUsingReducer("function", id)}`;
+            aeroplaneCockpitAndWingsP.innerHTML = `${returnObjectValueUsingReducer("parts", id, aeroplane)}: 
+            ${returnObjectValueUsingReducer("function", id, aeroplane)}`;
             break;
         case "fuselage":
         case "jetEngine":
-            aeroplaneFuselageAndJetEngineP.innerHTML = `${returnAeroplaneObjectValueUsingReducer("parts", id)}:
-             ${returnAeroplaneObjectValueUsingReducer("function", id)}`;
+            aeroplaneFuselageAndJetEngineP.innerHTML = `${returnObjectValueUsingReducer("parts", id, aeroplane)}:
+             ${returnObjectValueUsingReducer("function", id, aeroplane)}`;
             break;
         case "verticalStabiliser":
         case "rudder":
         case "horizontalStabiliser":
         case "elevator":
-            aeroplaneVerticalAndHorizontalStabiliserP.innerHTML = `${returnAeroplaneObjectValueUsingReducer("parts", id)}:
-             ${returnAeroplaneObjectValueUsingReducer("function", id)}`;
+            aeroplaneVerticalAndHorizontalStabiliserP.innerHTML = `${returnObjectValueUsingReducer("parts", id, aeroplane)}:
+             ${returnObjectValueUsingReducer("function", id, aeroplane)}`;
             break;
     }
 
@@ -460,25 +489,26 @@ function displayDefaultText() {
     aeroplaneVerticalAndHorizontalStabiliserP.innerHTML = aeroplane.function.default;
 }
 
-// Code sourced and adapted from:
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
-// https://stackoverflow.com/questions/52297161/extracting-data-from-object-by-string
+// Get aerodynamics chart polygons and lines to add the display-polygon and hide-line class to them.
+const liftPolygon = document.querySelector("#liftPolygon");
+const thrustPolygon = document.querySelector("#thrustPolygon");
+const weightPolygon = document.querySelector("#weightPolygon");
+const dragPolygon = document.querySelector("#dragPolygon");
 
-// Return aeroplane object value with matching key using a reducer by walking through the object.
-function returnAeroplaneObjectValueUsingReducer(key, value) {
-    return [key, value].reduce((k, i) => k[i], aeroplane);
+const aerodynamicsChart = {
+    polygons: {
+        lift: liftPolygon,
+        thrust: thrustPolygon,
+        weight: weightPolygon,
+        drag: dragPolygon
+    }
 }
 
-// Get aerodynamics chart div and span elements to create a tooltip element for each.
-const liftDiv = document.querySelector(".lift");
-const weightDiv = document.querySelector(".weight");
-const thrustDiv = document.querySelector(".thrust");
-const dragDiv = document.querySelector(".drag");
-
-const liftSpan = liftDiv.querySelector("span");
-const weightSpan = weightDiv.querySelector("span");
-const thrustSpan = thrustDiv.querySelector("span");
-const dragSpan = dragDiv.querySelector("span");
+// Add polygon animation class to the event.
+function addPolygonAnimation(id) {
+    const svgElement = returnObjectValueUsingReducer("polygons", id, aerodynamicsChart);
+    svgElement.classList.add("display-polygon");
+}
 
 createTooltip(liftSpan, liftDiv, aeroplane.aerodynamics.lift);
 createTooltip(weightSpan, weightDiv, aeroplane.aerodynamics.weight);
@@ -496,4 +526,14 @@ function createTooltip(spanElement, divElement, tooltipContent) {
 
     tooltipElement.appendChild(spanElement);
     divElement.appendChild(tooltipElement);
+}
+
+
+// Code sourced and adapted from:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+// https://stackoverflow.com/questions/52297161/extracting-data-from-object-by-string
+
+// Return object value with matching key using a reducer by walking through the object.
+function returnObjectValueUsingReducer(key, value, object) {
+    return [key, value].reduce((k, i) => k[i], object);
 }
