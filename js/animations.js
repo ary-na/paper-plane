@@ -1,6 +1,9 @@
 // Code sourced and adapted from:
 // https://animejs.com/documentation/#motionPath
 // https://animejs.com/documentation/#lineDrawing
+// https://www.youtube.com/watch?v=NWKxgDpJQBA&t=529s
+// https://greensock.com/docs/v3/Plugins/ScrollTrigger
+
 let paperPlanePath = anime.path('#route');
 
 // The settings for the motion path animation of the paper plane on the home screen.
@@ -32,4 +35,34 @@ let radarLineDrawing = anime({
     delay: function(el, i) { return i * 1000 },
     direction: 'alternate',
     loop: true
+});
+
+let aerodynamicsChartsDrawing = anime({
+    targets: '#liftLine, #weightLine',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 2000,
+    direction: 'alternate-reverse',
+    loop: true
+});
+
+gsap.to("#mainHeading", {
+    scrollTrigger : {
+        scrub: 1
+    },
+    scale: 3,
+});
+
+gsap.to("#homeClouds", {
+    scrollTrigger : {
+        scrub: 1
+    },
+    scaleX: 4
+});
+
+gsap.to("#aerodynamicsClouds", {
+    scrollTrigger : {
+        scrub: 1
+    },
+    scaleX: 2
 });
