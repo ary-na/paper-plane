@@ -18,7 +18,8 @@
     <script type="module"
             src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/shoelace-autoloader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </head>
 <body>
@@ -54,7 +55,7 @@
 <main>
     <section id="home">
         <h1>Learn to fly</h1>
-        <h2>Make y
+        <h2 id="mainHeading">Make y
             <svg class="signal" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle id="signalLetter" cx="100" cy="100" r="100"/>
             </svg>
@@ -79,7 +80,7 @@
             </svg>
         </aside>
 
-        <aside>
+        <aside id="homeClouds">
             <svg class="clouds" width="100%" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
             </svg>
@@ -124,36 +125,45 @@
     </section>
 
     <section id="aerodynamics">
+        <aside id="aerodynamicsClouds">
+        <svg class="clouds" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
+        </svg>
+        </aside>
         <h2>Aerodynamics</h2>
-
         <article>
-            <h3>Understand how an aeroplane with all it's weight and payload can fly through the clouds</h3>
+            <h3>An aeroplane can fly through the clouds with all its weight and payload. But how?
+            </h3>
+            <p>To understand how an aeroplane can fly, you need to understand the rules of aerodynamics and how air
+                affects anything that moves through it.
+            </p>
+            <p>Interact with each force of the flight to read more!</p>
             <div class="aerodynamics-chart-y-axis">
-                <div class="lift"><span>Lift</span></div>
+                <div class="lift-div"><span id="lift">Lift</span></div>
                 <div class="aerodynamics-chart-x-axis">
-                    <div class="drag"><span>Drag</span></div>
+                    <div class="drag-div"><span id="drag">Drag</span></div>
                     <svg class="aerodynamics-svg" viewBox="0 0 1074 1074" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <g id="aerodynamics" clip-path="url(#clip0_153_105)">
-                            <g id="lift">
-                                <line id="lifLine" x1="537" y1="487" x2="537" y2="37"/>
-                                <path id="liftPolygon"
+                            <g>
+                                <line class="lines-initial-state" id="liftLine" x1="537" y1="487" x2="537" y2="37"/>
+                                <path class="polygons-initial-state" id="liftPolygon"
                                       d="M533.536 6C535.075 3.33333 538.925 3.33333 540.464 6L555.187 31.5C556.726 34.1667 554.802 37.5 551.722 37.5H522.278C519.198 37.5 517.274 34.1667 518.813 31.5L533.536 6Z"/>
                             </g>
-                            <g id="weight">
-                                <line id="weightLine" y1="-4" x2="450" y2="-4" transform="matrix(0 1 1 0 541 587)"/>
-                                <path id="weightPolygon"
+                            <g>
+                                <line class="lines-initial-state" id="weightLine" y1="-4" x2="450" y2="-4" transform="matrix(0 1 1 0 541 587)"/>
+                                <path class="polygons-initial-state" id="weightPolygon"
                                       d="M533.536 1068C535.075 1070.67 538.925 1070.67 540.464 1068L555.187 1042.5C556.726 1039.83 554.802 1036.5 551.722 1036.5H522.278C519.198 1036.5 517.274 1039.83 518.813 1042.5L533.536 1068Z"/>
                             </g>
-                            <g id="thrust">
-                                <line id="thrustLine" y1="-4" x2="450" y2="-4" transform="matrix(1 0 0 -1 587 533)"
+                            <g>
+                                <line class="lines-initial-state" id="thrustLine" y1="-4" x2="450" y2="-4" transform="matrix(1 0 0 -1 587 533)"
                                       stroke-dasharray="16 16"/>
-                                <path id="thrustPolygon"
+                                <path class="polygons-initial-state" id="thrustPolygon"
                                       d="M1068 540.464C1070.67 538.925 1070.67 535.075 1068 533.536L1042.5 518.813C1039.83 517.274 1036.5 519.198 1036.5 522.278V551.722C1036.5 554.802 1039.83 556.726 1042.5 555.187L1068 540.464Z"/>
                             </g>
-                            <g id="drag">
-                                <line id="dragLine" x1="487" y1="537" x2="37" y2="537" stroke-dasharray="16 16"/>
-                                <path id="dragPolygon"
+                            <g>
+                                <line class="lines-initial-state" id="dragLine" x1="487" y1="537" x2="37" y2="537" stroke-dasharray="16 16"/>
+                                <path class="polygons-initial-state" id="dragPolygon"
                                       d="M6 540.464C3.33333 538.925 3.33333 535.075 6 533.536L31.5 518.813C34.1667 517.274 37.5 519.198 37.5 522.278V551.722C37.5 554.802 34.1667 556.726 31.5 555.187L6 540.464Z"/>
                             </g>
                         </g>
@@ -163,19 +173,12 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <div class="thrust"><span>Thrust</span></div>
+                    <div class="thrust-div"><span id="thrust">Thrust</span></div>
                 </div>
-                <div class="weight"><span>Weight</span></div>
+                <div class="weight-div"><span id="weight">Weight</span></div>
             </div>
 
         </article>
-
-
-        <aside>
-            <svg class="clouds" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
-            </svg>
-        </aside>
 
         <!-- Code sourced and adapted from:
                https://stackoverflow.com/questions/49297396/unable-to-draw-lines-by-using-anime-js
@@ -283,7 +286,7 @@
                 </sl-button>
             </sl-card>
         </article>
-        <aside>
+        <aside id="footerClouds">
             <svg class="clouds clouds-purple" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
             </svg>
