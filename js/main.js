@@ -537,3 +537,24 @@ function createTooltip(spanElement, divElement, tooltipContent) {
 function returnObjectValueUsingReducer(key, value, object) {
     return [key, value].reduce((k, i) => k[i], object);
 }
+
+// Code sourced and adapted from:
+// https://techstacker.com/javascript-detect-if-screen-width-is-greater-or-less-than/
+
+// Get the tab-group to change the placement attribute on bigger screen sizes
+const tabGroup = document.querySelector(".tab-group");
+window.addEventListener("resize", evt => {
+    tabGroupWindowResizeAndLoadPlacementChange();
+});
+
+window.addEventListener("load", evt => {
+    tabGroupWindowResizeAndLoadPlacementChange();
+});
+
+function tabGroupWindowResizeAndLoadPlacementChange() {
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        tabGroup.setAttribute("placement", "start");
+    } else {
+        tabGroup.setAttribute("placement", "top");
+    }
+}
