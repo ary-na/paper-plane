@@ -326,7 +326,7 @@ let aeroplane = {
         "        </g>\n" +
         "    </g>\n" +
         "</>\n"
-}
+};
 
 // Aeroplane Parts and Function:
 
@@ -409,7 +409,7 @@ const aeroplaneAerodynamicsElements = [liftSpan, weightSpan, thrustSpan, dragSpa
     });
     aeroplaneAerodynamicsElements.forEach(element => {
         element.addEventListener(evt, aerodynamicsEventHandler, false);
-    })
+    });
 });
 
 // Handle mouseover, mouseleave, click and blur events for Parts and Function.
@@ -502,7 +502,7 @@ const aerodynamicsChart = {
         weight: weightPolygon,
         drag: dragPolygon
     }
-}
+};
 
 // Add polygon animation class to the event.
 function addPolygonAnimation(id) {
