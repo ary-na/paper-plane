@@ -25,6 +25,8 @@ This repository is for an educational website on aeroplanes developed for a univ
 
 “Arrow Functions, the Basics.” n.d. Javascript.info. Accessed August 21, 2023. https://javascript.info/arrow-functions-basics.
 
+CareerExplorer. 2017. “What Does an Aerospace Engineer Do?” Careerexplorer.com. CareerExplorer. April 11, 2017. https://www.careerexplorer.com/careers/aerospace-engineer/.
+
 “Docs.” n.d. GreenSock. https://greensock.com/docs/v3/Plugins/ScrollTrigger.
 
 “Element.setAttribute() - Web APIs | MDN.” n.d. Developer.mozilla.org. https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute.
@@ -47,6 +49,8 @@ May, Sandra. 2011. “What Is Aerodynamics?” NASA. NASA. June 4, 2011. https:/
 
 “Parallax Effect Using GSAP ScrollTrigger | GSAP Parallax Background Scrolling.” n.d. Www.youtube.com. Accessed August 21, 2023. https://www.youtube.com/watch?v=NWKxgDpJQBA&t=529s.
 
+“Pilot Skills: What Makes a Great Aviator? - AeroGuard Flight Training.” n.d. AeroGuard. https://www.flyaeroguard.com/learn/how-to-become-a-pilot/pilot-skills/.
+
 “Position:sticky Is Not Working.” n.d. Stack Overflow. Accessed August 21, 2023. https://stackoverflow.com/questions/45530235/positionsticky-is-not-working.
 
 Review of Convert Text to Vector Paths. n.d. Help.figma.com. Accessed August 21, 2023. https://help.figma.com/hc/en-us/articles/360047239073-Convert-text-to-vector-paths.
@@ -60,6 +64,8 @@ Review of Convert Text to Vector Paths. n.d. Help.figma.com. Accessed August 21,
 “Unable to Draw Lines by Using Anime Js.” n.d. Stack Overflow. Accessed August 21, 2023. https://stackoverflow.com/questions/49297396/unable-to-draw-lines-by-using-anime-js.
 
 “Usage.” n.d. Shoelace.style. Accessed August 21, 2023. https://shoelace.style/getting-started/usage#events.
+
+“What Does an Aircraft Mechanic Do? ‐ CareerExplorer.” n.d. Www.careerexplorer.com. https://www.careerexplorer.com/careers/aircraft-mechanic/.
 
 “Working with Objects.” 2019. MDN Web Docs. November 27, 2019. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects.
 
