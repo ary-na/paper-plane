@@ -41,6 +41,8 @@ CareerExplorer. 2017. “What Does an Aerospace Engineer Do?” Careerexplorer.c
 
 “How to Create a Full Screen Overlay Navigation.” n.d. Www.w3schools.com. https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp.
 
+“How to Detect If Screen Width Is Greater or Less than a Value in JavaScript.” n.d. Www.techstacker.com. https://techstacker.com/javascript-detect-if-screen-width-is-greater-or-less-than/.
+
 “How to Flip an Image.” n.d. Www.w3schools.com. https://www.w3schools.com/howto/howto_css_flip_image.asp.
 
 “Insert a Div Element as Parent.” n.d. Stack Overflow. Accessed August 21, 2023. https://stackoverflow.com/questions/6938248/insert-a-div-element-as-parent.
