@@ -14,6 +14,7 @@
           href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/themes/dark.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link type="text/css" rel="stylesheet" href="css/styles.css">
+    <link type="text/css" rel="stylesheet" href="css/desktop.css">
     <link rel="icon" href="assets/logos/white-paper-plane.ico">
     <script type="module"
             src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/cdn/shoelace-autoloader.js"></script>
@@ -90,37 +91,40 @@
     <section id="partsAndFunction">
         <h2>Aeroplane's Parts and Function</h2>
         <article>
-            <h3>Your journey starts here.</h3>
-            <p>Before learning how an aeroplane can fly, we need to understand the parts and their functions inside a
-                plane.</p>
+            <div class="article-content">
+                <h3>Your journey starts here.</h3>
+                <p>Before learning how an aeroplane can fly, we need to understand the parts and their functions inside
+                    a
+                    plane.</p>
+                </div>
+                    <sl-tab-group class="tab-group" placement="top">
+                        <sl-tab slot="nav" panel="cockpit-and-wings">Cockpit & Wings</sl-tab>
+                        <sl-tab slot="nav" panel="fuselage-and-jet-engine">Fuselage & Jet Engine</sl-tab>
+                        <sl-tab slot="nav" panel="vertical-and-horizontal-stabiliser">Vertical & Horizontal Stabiliser
+                        </sl-tab>
 
-            <sl-tab-group class="tab-group">
-                <sl-tab slot="nav" panel="cockpit-and-wings">Cockpit & Wings</sl-tab>
-                <sl-tab slot="nav" panel="fuselage-and-jet-engine">Fuselage & Jet Engine</sl-tab>
-                <sl-tab slot="nav" panel="vertical-and-horizontal-stabiliser">Vertical & Horizontal Stabiliser</sl-tab>
-
-                <sl-tab-panel name="cockpit-and-wings">
-                    <div id="cockpitAndWings">
-                        <svg class="airbus-319" viewBox="0 0 1009 627" fill="none"
-                             xmlns="http://www.w3.org/2000/svg"></svg>
-                        <div><p></p></div>
-                    </div>
-                </sl-tab-panel>
-                <sl-tab-panel name="fuselage-and-jet-engine">
-                    <div id="fuselageAndJetEngine">
-                        <svg class="airbus-319" viewBox="0 0 1009 627" fill="none"
-                             xmlns="http://www.w3.org/2000/svg"></svg>
-                        <div><p></p></div>
-                    </div>
-                </sl-tab-panel>
-                <sl-tab-panel name="vertical-and-horizontal-stabiliser">
-                    <div id="verticalAndHorizontalStabiliser">
-                        <svg class="airbus-319" viewBox="0 0 1009 627" fill="none"
-                             xmlns="http://www.w3.org/2000/svg"></svg>
-                        <div><p></p></div>
-                    </div>
-                </sl-tab-panel>
-            </sl-tab-group>
+                        <sl-tab-panel name="cockpit-and-wings">
+                            <div id="cockpitAndWings">
+                                <svg class="airbus-319" viewBox="0 0 1009 627" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg"></svg>
+                                <div><p></p></div>
+                            </div>
+                        </sl-tab-panel>
+                        <sl-tab-panel name="fuselage-and-jet-engine">
+                            <div id="fuselageAndJetEngine">
+                                <svg class="airbus-319" viewBox="0 0 1009 627" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg"></svg>
+                                <div><p></p></div>
+                            </div>
+                        </sl-tab-panel>
+                        <sl-tab-panel name="vertical-and-horizontal-stabiliser">
+                            <div id="verticalAndHorizontalStabiliser">
+                                <svg class="airbus-319" viewBox="0 0 1009 627" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg"></svg>
+                                <div><p></p></div>
+                            </div>
+                        </sl-tab-panel>
+                    </sl-tab-group>
         </article>
     </section>
 
@@ -132,11 +136,13 @@
         </aside>
         <h2>Aerodynamics</h2>
         <article>
-            <h3>An aeroplane can fly through the clouds with all its weight and payload. But how?
-            </h3>
-            <p>To understand how an aeroplane can fly, you need to understand the rules of aerodynamics and how air
-                affects anything that moves through it. Interact with each force of the flight to read more!
-            </p>
+            <div class="article-content">
+                <h3>An aeroplane can fly through the clouds with all its weight and payload. But how?
+                </h3>
+                <p>To understand how an aeroplane can fly, you need to understand the rules of aerodynamics and how air
+                    affects anything that moves through it. Interact with each force of the flight to read more!
+                </p>
+            </div>
             <div class="aerodynamics-chart-y-axis">
                 <div class="lift-div"><span id="lift">Lift</span></div>
                 <div class="aerodynamics-chart-x-axis">
@@ -179,7 +185,6 @@
                 </div>
                 <div class="weight-div"><span id="weight">Weight</span></div>
             </div>
-
         </article>
 
         <!-- Code sourced and adapted from:
@@ -202,12 +207,15 @@
     <section id="gallery">
         <h2>Gallery</h2>
         <article>
-            <h3>Photos of the Month</h3>
-            <p>Aviation is our passion, making our website the best place to showcase your aviation-themed photos. We
-                select a handful of images monthly and showcase them on our website. To learn more about all the details
-                and how to participate, click
-                <a href="#whatIsNext">here</a>!</p>
-
+            <div class="article-content">
+                <h3>Photos of the Month</h3>
+                <p>Aviation is our passion, making our website the best place to showcase your aviation-themed photos.
+                    We
+                    select a handful of images monthly and showcase them on our website. To learn more about all the
+                    details
+                    and how to participate, click
+                    <a href="#whatIsNext">here</a>!</p>
+            </div>
             <div class="splide">
                 <div class="splide__track">
                     <ul class="splide__list">
@@ -243,47 +251,56 @@
     <section id="whatIsNext">
         <h2>What's Next?</h2>
         <article>
-            <h3>What's Next?</h3>
-            <p>The journey you have completed was just the beginning. Explore the links below to see what's next.</p>
-            <sl-card class="card-header">
-                <div slot="header">
-                    <sl-icon-button name="people" label="Pilot Training"></sl-icon-button>
-                    Pilot Training
-                </div>
-                <p>Pilots must have various soft skills such as excellent communication, stress management, teamwork,
-                    and, most importantly, making the correct decision under pressure while deeply understanding
-                    Aeroplanes and their technical details.
-                </p>
-                <sl-button variant="primary">
-                    Learn More
-                </sl-button>
+            <div class="article-content">
+                <h3>What's Next?</h3>
+                <p>The journey you have completed was just the beginning. Explore the links below to see what's
+                    next.</p>
+            </div>
+            <div class="sl-card">
+                <sl-card class="card-header">
+                    <div slot="header">
+                        <sl-icon-button name="people" label="Pilot Training"></sl-icon-button>
+                        Pilot Training
+                    </div>
+                    <p>Pilots must have various soft skills such as excellent communication, stress management,
+                        teamwork,
+                        and, most importantly, making the correct decision under pressure while deeply understanding
+                        Aeroplanes and their technical details.
+                    </p>
+                    <sl-button variant="primary">
+                        Learn More
+                    </sl-button>
 
-            </sl-card>
-            <sl-card class="card-header">
-                <div slot="header">
-                    <sl-icon-button name="airplane-engines" label="Aerospace Engineering"></sl-icon-button>
-                    Aerospace Engineering
-                </div>
-                <p>An aerospace engineer is primarily responsible for designing, developing and maintaining
-                    aviation-related systems such as aircraft, satellite systems and spacecraft. You are responsible for
-                    testing prototypes and ensuring they meet the safety and performance regulations.
-                </p>
-                <sl-button variant="primary">
-                    Learn More
-                </sl-button>
-            </sl-card>
-            <sl-card class="card-header">
-                <div slot="header">
-                    <sl-icon-button name="gear" label="Aviation Mechanic"></sl-icon-button>
-                    Aviation Mechanic
-                </div>
-                <p>The aviation mechanic is mainly responsible for inspecting an aviation system to ensure an aviation
-                    system is airworthy and can fly. The mechanic's responsibility is crucial, and adhering to strict
-                    guidelines is necessary. </p>
-                <sl-button variant="primary">
-                    Learn More
-                </sl-button>
-            </sl-card>
+                </sl-card>
+                <sl-card class="card-header">
+                    <div slot="header">
+                        <sl-icon-button name="airplane-engines" label="Aerospace Engineering"></sl-icon-button>
+                        Aerospace Engineering
+                    </div>
+                    <p>An aerospace engineer is primarily responsible for designing, developing and maintaining
+                        aviation-related systems such as aircraft, satellite systems and spacecraft. You are responsible
+                        for
+                        testing prototypes and ensuring they meet the safety and performance regulations.
+                    </p>
+                    <sl-button variant="primary">
+                        Learn More
+                    </sl-button>
+                </sl-card>
+                <sl-card class="card-header">
+                    <div slot="header">
+                        <sl-icon-button name="gear" label="Aviation Mechanic"></sl-icon-button>
+                        Aviation Mechanic
+                    </div>
+                    <p>The aviation mechanic is mainly responsible for inspecting an aviation system to ensure an
+                        aviation
+                        system is airworthy and can fly. The mechanic's responsibility is crucial, and adhering to
+                        strict
+                        guidelines is necessary. </p>
+                    <sl-button variant="primary">
+                        Learn More
+                    </sl-button>
+                </sl-card>
+            </div>
         </article>
         <aside id="footerClouds">
             <svg class="clouds clouds-purple" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
