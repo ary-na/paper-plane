@@ -13,8 +13,8 @@ This repository is for an educational website on aeroplanes developed for a univ
 
 ## Screenshots
 
-![Home Page Light](assets/screenshots/screenshot-paper-plane-light.png);
-![Home Page Dark](assets/screenshots/screenshot-paper-plane-dark.png);
+![Home Page Light](assets/screenshots/screenshot-paper-plane-light.png)
+![Home Page Dark](assets/screenshots/screenshot-paper-plane-dark.png)
 
 ### References
 
