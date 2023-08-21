@@ -90,9 +90,9 @@
     <section id="partsAndFunction">
         <h2>Aeroplane's Parts and Function</h2>
         <article>
-            <h3>Your Journey Starts here</h3>
-            <p>Before we start learning how an aorplane can fly we need to understand the part and their functions of an
-                airplane.</p>
+            <h3>Your journey starts here.</h3>
+            <p>Before learning how an aeroplane can fly, we need to understand the parts and their functions inside a
+                plane.</p>
 
             <sl-tab-group class="tab-group">
                 <sl-tab slot="nav" panel="cockpit-and-wings">Cockpit & Wings</sl-tab>
@@ -126,18 +126,17 @@
 
     <section id="aerodynamics">
         <aside id="aerodynamicsClouds">
-        <svg class="clouds" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
-        </svg>
+            <svg class="clouds" viewBox="0 0 1280 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 136.805C0 98.7778 31.7877 68.4702 69.7719 70.282V70.282C93.9765 71.4366 116.898 59.3532 129.623 38.7309L131.34 35.9481C154.213 -1.12171 204.47 -9.6212 238.261 17.8656L255.32 31.7422C285.147 56.004 326.964 59.0179 359.961 39.284L387.346 22.9063C442.836 -10.279 513.972 -0.155807 558.001 47.1916L589.655 81.2306C623.511 117.638 678.864 123.903 720 95.9835V95.9835L785.741 44.0566C814.607 21.2563 854.017 17.1034 887.002 33.3862L906.858 43.1883C935.037 57.0989 969.088 49.7147 988.973 25.3811V25.3811C1014.71 -6.11448 1062.26 -7.8477 1090.22 21.6903L1149.77 84.5893C1164.66 100.322 1187.72 105.232 1207.73 96.9311V96.9311C1242.14 82.6594 1280 107.945 1280 145.194V229H0V136.805Z"/>
+            </svg>
         </aside>
         <h2>Aerodynamics</h2>
         <article>
             <h3>An aeroplane can fly through the clouds with all its weight and payload. But how?
             </h3>
             <p>To understand how an aeroplane can fly, you need to understand the rules of aerodynamics and how air
-                affects anything that moves through it.
+                affects anything that moves through it. Interact with each force of the flight to read more!
             </p>
-            <p>Interact with each force of the flight to read more!</p>
             <div class="aerodynamics-chart-y-axis">
                 <div class="lift-div"><span id="lift">Lift</span></div>
                 <div class="aerodynamics-chart-x-axis">
@@ -151,18 +150,21 @@
                                       d="M533.536 6C535.075 3.33333 538.925 3.33333 540.464 6L555.187 31.5C556.726 34.1667 554.802 37.5 551.722 37.5H522.278C519.198 37.5 517.274 34.1667 518.813 31.5L533.536 6Z"/>
                             </g>
                             <g>
-                                <line class="lines-initial-state" id="weightLine" y1="-4" x2="450" y2="-4" transform="matrix(0 1 1 0 541 587)"/>
+                                <line class="lines-initial-state" id="weightLine" y1="-4" x2="450" y2="-4"
+                                      transform="matrix(0 1 1 0 541 587)"/>
                                 <path class="polygons-initial-state" id="weightPolygon"
                                       d="M533.536 1068C535.075 1070.67 538.925 1070.67 540.464 1068L555.187 1042.5C556.726 1039.83 554.802 1036.5 551.722 1036.5H522.278C519.198 1036.5 517.274 1039.83 518.813 1042.5L533.536 1068Z"/>
                             </g>
                             <g>
-                                <line class="lines-initial-state" id="thrustLine" y1="-4" x2="450" y2="-4" transform="matrix(1 0 0 -1 587 533)"
+                                <line class="lines-initial-state" id="thrustLine" y1="-4" x2="450" y2="-4"
+                                      transform="matrix(1 0 0 -1 587 533)"
                                       stroke-dasharray="16 16"/>
                                 <path class="polygons-initial-state" id="thrustPolygon"
                                       d="M1068 540.464C1070.67 538.925 1070.67 535.075 1068 533.536L1042.5 518.813C1039.83 517.274 1036.5 519.198 1036.5 522.278V551.722C1036.5 554.802 1039.83 556.726 1042.5 555.187L1068 540.464Z"/>
                             </g>
                             <g>
-                                <line class="lines-initial-state" id="dragLine" x1="487" y1="537" x2="37" y2="537" stroke-dasharray="16 16"/>
+                                <line class="lines-initial-state" id="dragLine" x1="487" y1="537" x2="37" y2="537"
+                                      stroke-dasharray="16 16"/>
                                 <path class="polygons-initial-state" id="dragPolygon"
                                       d="M6 540.464C3.33333 538.925 3.33333 535.075 6 533.536L31.5 518.813C34.1667 517.274 37.5 519.198 37.5 522.278V551.722C37.5 554.802 34.1667 556.726 31.5 555.187L6 540.464Z"/>
                             </g>
@@ -201,11 +203,10 @@
         <h2>Gallery</h2>
         <article>
             <h3>Photos of the Month</h3>
-            <p>We love aviation, and our website is perfect for showcasing your aviation-themed photos! Every month, we
-                highlight a group of fantastic aviation-themed photographs. And think what? We run a cool contest to
-                choose the best shot at the end of each month! Want to join in on the fun? Just click <a
-                        href="#whatIsNext">here</a> for all the
-                details on how to enter and get a chance to win!</p>
+            <p>Aviation is our passion, making our website the best place to showcase your aviation-themed photos. We
+                select a handful of images monthly and showcase them on our website. To learn more about all the details
+                and how to participate, click
+                <a href="#whatIsNext">here</a>!</p>
 
             <div class="splide">
                 <div class="splide__track">
@@ -243,18 +244,16 @@
         <h2>What's Next?</h2>
         <article>
             <h3>What's Next?</h3>
-            <p>The journey you have embarked on is only the beginning. Try one of the links and see what's waiting for
-                you in the aviation industry.</p>
+            <p>The journey you have completed was just the beginning. Explore the links below to see what's next.</p>
             <sl-card class="card-header">
                 <div slot="header">
                     <sl-icon-button name="people" label="Pilot Training"></sl-icon-button>
                     Pilot Training
                 </div>
-                <p>Being a pilot takes hard work, focus, and determination. You'll learn everything about aviation,
-                    aircraft, and navigation. It would be best if you were in good shape, both physically and mentally.
-                    Training includes classes, simulations, and actual flying. Your job is to operate aircraft safely
-                    and
-                    make wise decisions.</p>
+                <p>Pilots must have various soft skills such as excellent communication, stress management, teamwork,
+                    and, most importantly, making the correct decision under pressure while deeply understanding
+                    Aeroplanes and their technical details.
+                </p>
                 <sl-button variant="primary">
                     Learn More
                 </sl-button>
@@ -265,9 +264,10 @@
                     <sl-icon-button name="airplane-engines" label="Aerospace Engineering"></sl-icon-button>
                     Aerospace Engineering
                 </div>
-                <p>Aerospace engineering involves designing aircraft and spacecraft and requires aerodynamics, materials
-                    science, and propulsion systems knowledge. Engineers are developing advanced materials to reduce
-                    weight and improve efficiency and new engines to reduce emissions and improve fuel efficiency. </p>
+                <p>An aerospace engineer is primarily responsible for designing, developing and maintaining
+                    aviation-related systems such as aircraft, satellite systems and spacecraft. You are responsible for
+                    testing prototypes and ensuring they meet the safety and performance regulations.
+                </p>
                 <sl-button variant="primary">
                     Learn More
                 </sl-button>
@@ -277,10 +277,9 @@
                     <sl-icon-button name="gear" label="Aviation Mechanic"></sl-icon-button>
                     Aviation Mechanic
                 </div>
-                <p>As an aviation mechanic, your job is to keep aircraft safe and operational. You inspect and fix
-                    mechanical and electrical components and prioritize safety by addressing potential issues before
-                    takeoff. Good communication and problem-solving skills are essential in working with pilots and
-                    other professionals.</p>
+                <p>The aviation mechanic is mainly responsible for inspecting an aviation system to ensure an aviation
+                    system is airworthy and can fly. The mechanic's responsibility is crucial, and adhering to strict
+                    guidelines is necessary. </p>
                 <sl-button variant="primary">
                     Learn More
                 </sl-button>

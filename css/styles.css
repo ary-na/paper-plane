@@ -460,7 +460,7 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
     opacity: 0;
     stroke-width: 0;
     transition: opacity 1s;
-    fill: var(--color-secondary)
+    fill: var(--color-purple-secondary)
 }
 
 .lines-initial-state {
