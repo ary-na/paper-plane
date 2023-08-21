@@ -16,6 +16,7 @@
     --color-purple-secondary: #B298DC;
     --color-blue-primary: #9CBDE3;
     --color-gray-primary: #4a4e69;
+    --color-text-secondary: #f8f8f2;
 
     --font-family-serif: 'Neucha', cursive;
     --font-family-sans-serif: 'Lato', sans-serif;
@@ -43,6 +44,7 @@
     --color-purple-secondary: #893EF4;
     --color-blue-primary: #4080c9;
     --color-gray-primary: #dee2ff;
+    --color-text-secondary: #e5e5e5;
 }
 
 /* || Animations .......................................................... */
@@ -309,6 +311,15 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
 
 #lineThree, #lineSix {
     animation: ripple infinite 2.8s ease alternate-reverse;
+}
+
+#gallery {
+    background-color: var(--color-purple-primary);
+    color: var(--color-text-secondary);
+}
+
+#gallery a {
+    color: var(--color-blue-primary);
 }
 
 #whatIsNext article > h3 {
