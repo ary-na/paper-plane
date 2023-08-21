@@ -7,7 +7,7 @@ For more information, visit [Academic Integrity at Curtin](https://www.curtin.ed
 This repository is for an educational website on aeroplanes developed for a university project.
 
 ## Live Website
-[Link]()
+[Link](https://stately-dasik-d4a58a.netlify.app)
 
 ### References
 
