@@ -1,0 +1,51 @@
+@media screen and (min-width: 768px) {
+    article {
+        max-width: 1200px;
+        gap: var(--sl-spacing-4x-large);
+    }
+
+    #partsAndFunction article > .article-content {
+        text-align: left;
+    }
+
+    .tab-group {
+        max-width: 1200px;
+    }
+
+    .tab-group p {
+        text-align: center;
+        width: 100%;
+    }
+
+    .airbus-319 {
+        max-width: 100%;
+    }
+
+    #aerodynamics article {
+        flex-direction: row;
+    }
+
+    .aerodynamics-chart-y-axis {
+        order: 1;
+    }
+
+    #aerodynamics .article-content {
+        order: 2;
+    }
+
+    #gallery .splide {
+        max-width: 600px;
+    }
+
+    #gallery article {
+        flex-direction: row;
+    }
+
+    #whatIsNext article .article-content > p {
+        text-align: center;
+    }
+
+    .sl-card {
+        flex-direction: row;
+    }
+}
