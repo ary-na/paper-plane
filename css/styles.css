@@ -322,7 +322,7 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
     color: var(--color-blue-primary);
 }
 
-#whatIsNext article > h3 {
+#whatIsNext article .article-content > h3 {
     font-size: 250%;
     align-self: center;
 }
@@ -428,7 +428,7 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
 }
 
 .aerodynamics-svg {
-    width: 50vw;
+    width: 80%;
     fill: none;
     stroke: var(--color-purple-secondary);
     stroke-width: 10px;
@@ -479,6 +479,13 @@ nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
     color: var(--color-secondary);
 }
 
+.article-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sl-spacing-large);;
+    width: 100%;
+}
+
 /* ........................................................................ */
 
 /* || Shoelace Custom HTML tags and Classes ............................... */
@@ -513,6 +520,12 @@ sl-icon-button {
 
 sl-card {
     max-width: 100vw;
+}
+
+.sl-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sl-spacing-large);
 }
 
 .card-header [slot='header'] {
